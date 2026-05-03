@@ -10,14 +10,14 @@ Live site: https://victortserovski.github.io
 
 A single-page portfolio showcasing four products built by orchestrating AI tools rather than writing code by hand:
 
-1. **Fake Discount BG** — Chrome extension that catches faked Black Friday discounts on Bulgarian e-commerce sites
+1. **Fake Discount BG** — Chrome extension that catches faked Black Friday discounts on Bulgarian e-commerce sites. [Live on the Chrome Web Store](https://chromewebstore.google.com/detail/fake-discount-bg/napohmhembobenfaaanfdabjehnjcdci).
 2. **SIMA-MA** — bilingual industrial website for a concrete-equipment manufacturer
 3. **Малки Подаръчета** — 81-page Next.js e-commerce site for a handmade-gifts business
 4. **Nova Control** — Windows desktop app (Python + PyQt6) reading Omron PLCs in concrete batching plants · 14 modules · 496 passing tests
 
 ## Tech
 
-Plain HTML + CSS + a tiny bit of vanilla JavaScript. No frameworks. No build step. The site is itself an example of the philosophy it promotes: a polished product shipped by orchestrating AI tools (Claude Code).
+Plain HTML + CSS + a tiny bit of vanilla JavaScript. No frameworks. No build step. The site is itself an example of the philosophy it promotes: a polished product shipped by orchestrating AI tools (Anthropic Claude Code).
 
 ## Deploy
 

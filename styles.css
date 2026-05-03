@@ -517,6 +517,18 @@ code {
 .status__dot--live,
 .status__dot--live::before { background: var(--status-live); }
 
+.status__link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.status__link:hover {
+  border-bottom-color: var(--accent);
+  color: var(--accent-hover);
+}
+
 .status--callout {
   display: block;
   background: var(--accent-soft);
