@@ -1,0 +1,19 @@
+# Local dev / Claude Code config (not for the public repo)
+.claude/
+
+# Source files used to brief Claude — kept locally, not deployed
+MASTER_PROMPT NC.md
+architecture NC.md
+README SIMA-MA website.md
+README malki podaracheta.md
+README fake discount.md
+
+# Original headshot (copied to assets/headshot.jpg; original kept locally)
+vic ts.jpg
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

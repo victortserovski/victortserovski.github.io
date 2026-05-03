@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <title>Victor Tserovski — AI Orchestrator</title>
+  <meta name="description" content="I ship full-stack products by orchestrating AI. Two websites, one Chrome extension, and an industrial desktop app with 496 passing tests. Built with Claude Code, Google Antigravity, and Codex — without writing code by hand.">
+
+  <meta property="og:title" content="Victor Tserovski — AI Orchestrator">
+  <meta property="og:description" content="I ship full-stack products by orchestrating AI.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://victortserovski.github.io">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <main id="main">
+
+    <!-- 1. HERO -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="container hero__inner">
+        <div class="hero__photo">
+          <img src="assets/headshot.jpg" alt="Victor Tserovski" width="240" height="240" loading="eager">
+        </div>
+        <div class="hero__content">
+          <p class="hero__name">Victor Tserovski</p>
+          <h1 class="hero__headline">I ship full-stack products by <span class="accent">orchestrating AI</span>.</h1>
+          <p class="hero__sub">Two websites, one Chrome extension, and an industrial desktop app with <strong>496 passing tests</strong>. Built with Claude Code, Google Antigravity, and Codex&nbsp;— without writing code by hand.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">See projects</a>
+            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#about" aria-label="Scroll to next section">
+        <span aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <!-- 2. ABOUT -->
+    <section class="section section--about" id="about" aria-labelledby="about-label">
+      <div class="container container--narrow">
+        <p class="section-label" id="about-label">About</p>
+        <p class="section__lead">I work at <strong>NielsenIQ</strong> as a <strong>Data Deployment Expert</strong>. I've never been a developer. Over the past <strong>18 months</strong> I've shipped four real products by orchestrating AI tools — from a polished Next.js e-commerce site to a Python desktop app talking to industrial hardware.</p>
+        <p class="section__lead">Coding without AI is starting to feel like doing math without a calculator — still possible, but no longer where the leverage is. The way software gets built is changing. I'm not waiting for permission — I'm learning, shipping, and getting better every week.</p>
+      </div>
+    </section>
+
+    <!-- 3. TOOLBELT -->
+    <section class="section section--toolbelt" id="toolbelt" aria-labelledby="toolbelt-label">
+      <div class="container container--narrow">
+        <p class="section-label" id="toolbelt-label">Toolbelt</p>
+        <h2 class="section__title">The AI stack I orchestrate.</h2>
+        <ul class="toolbelt-grid" role="list">
+          <li class="tool"><span class="tool__name">Claude Code</span><span class="tool__sub">primary</span></li>
+          <li class="tool"><span class="tool__name">Google Antigravity</span></li>
+          <li class="tool"><span class="tool__name">OpenAI Codex</span></li>
+          <li class="tool"><span class="tool__name">Python + PyQt6</span><span class="tool__sub">desktop</span></li>
+          <li class="tool"><span class="tool__name">Next.js + Tailwind</span><span class="tool__sub">web</span></li>
+          <li class="tool"><span class="tool__name">Chrome Extensions</span><span class="tool__sub">Manifest V3</span></li>
+          <li class="tool"><span class="tool__name">Cloudflare R2</span><span class="tool__sub">assets</span></li>
+          <li class="tool"><span class="tool__name">Web3Forms</span><span class="tool__sub">email</span></li>
+          <li class="tool"><span class="tool__name">Netlify · GitHub Pages</span><span class="tool__sub">deploy</span></li>
+        </ul>
+        <p class="note">These are the tools I orchestrate to ship products. The list grows monthly.</p>
+        <p class="note">I prompt in English by default. LLMs perform measurably better in English than in Bulgarian — language fluency is part of the toolkit, not separate from it.</p>
+      </div>
+    </section>
+
+    <!-- 4. PROJECTS -->
+    <section class="section section--projects" id="projects" aria-labelledby="projects-label">
+      <div class="container container--narrow">
+        <p class="section-label" id="projects-label">Projects</p>
+        <h2 class="section__title">Four shipped. Four stories.</h2>
+      </div>
+
+      <!-- Project 1: Extension -->
+      <article class="project" id="project-extension">
+        <div class="container container--narrow">
+          <div class="project__image">
+            <img src="assets/project-extension.svg" alt="Fake Discount BG — Chrome Extension. Placeholder graphic showing ascending bars on a dark background." loading="lazy">
+          </div>
+          <header class="project__header">
+            <h3 class="project__title">Fake Discount BG</h3>
+            <p class="project__tag"><span class="tag">Chrome Extension</span></p>
+            <p class="project__quote">"Bulgarian e-commerce inflates prices before Black Friday and fakes the discounts. Now my browser tells me when they're lying."</p>
+          </header>
+
+          <div class="project__body">
+            <h4>The problem</h4>
+            <p>During sale events, Bulgarian retailers (Emag, Ozone, Notino) raise prices days before the "discount" so the slashed price looks bigger than it is. There was no easy way to tell what was real.</p>
+
+            <h4>What I built</h4>
+            <p>A Chrome/Edge extension (Manifest&nbsp;V3) that auto-tracks every product I visit. After 7+ days of tracking, it gives a verdict directly on the product page: <strong>Fake discount / Real deal / Stable price / Still tracking</strong> — with reasoning text and an SVG price chart embedded into the page itself. Per-tab badge: <code>!</code> for fake, <code>✓</code> for real, <code>🎯</code> when a price target is hit.</p>
+
+            <h4>How I built it</h4>
+            <p>Vibe-coded with <strong>Claude Code</strong>. Site-specific content scripts (Emag / Ozone / Notino) sharing a common base class. Background service worker for message routing and analysis. Per-product Chrome local storage with O(1) reads and a write queue to prevent race conditions on rapid reloads. EAN / GTIN extraction enables future cross-site matching.</p>
+          </div>
+
+          <ul class="proof" role="list">
+            <li>3 marketplaces</li>
+            <li>Bilingual BG / EN</li>
+            <li>Keyboard shortcut</li>
+            <li>Price-target alerts</li>
+            <li>Export / import JSON</li>
+            <li>Persistent filters</li>
+          </ul>
+
+          <p class="taught"><span class="taught__label">Taught me</span> Manifest V3 service workers, content-script CSP isolation on strict sites (Ozone), and how to design for a multi-day data-collection window.</p>
+
+          <p class="status"><span class="status__dot status__dot--pending"></span> Currently in Google review for the Chrome Web Store.</p>
+        </div>
+      </article>
+
+      <!-- Project 2: SIMA-MA -->
+      <article class="project" id="project-sima-ma">
+        <div class="container container--narrow">
+          <div class="project__image">
+            <img src="assets/project-sima-ma.svg" alt="SIMA-MA Industrial Website. Placeholder graphic with scattered particle dots on a dark background." loading="lazy">
+          </div>
+          <header class="project__header">
+            <h3 class="project__title">SIMA-MA Industrial Website</h3>
+            <p class="project__tag"><span class="tag">Bilingual Marketing Site</span></p>
+            <p class="project__quote">"A Bulgarian concrete-equipment manufacturer needed a real bilingual web presence — not just a Facebook page."</p>
+          </header>
+
+          <div class="project__body">
+            <h4>The problem</h4>
+            <p>SIMA-MA Ltd. (Cherven Bryag, Bulgaria) builds concrete batching plants, valves, silo solutions, and custom steel fabrication. They needed a serious bilingual site to reach both Bulgarian and English-speaking buyers.</p>
+
+            <h4>What I built</h4>
+            <p>A 13-page bilingual website with directory-based i18n (<code>/bg/</code> and <code>/en/</code>), a custom canvas particles animation themed to the industry (gravel / sand / cement), a 79-photo gallery with category accordions and lightbox, a fully styled EU-funded project page with 16 mandatory PDF documents, and a validated contact form.</p>
+
+            <h4>How I built it</h4>
+            <p>Vibe-coded with <strong>Claude Code / Codex</strong>. Static HTML + CSS + vanilla JS — no framework. Web3Forms for the contact form, Cloudflare R2 for image hosting (zero egress), Netlify deployment with a 3-branch strategy (alpha&nbsp;→&nbsp;beta&nbsp;→&nbsp;main).</p>
+          </div>
+
+          <ul class="proof" role="list">
+            <li>13 pages BG / EN</li>
+            <li>Custom canvas animation</li>
+            <li>ManufacturingBusiness JSON-LD</li>
+            <li>hreflang + sitemap lastmod</li>
+            <li>Skip-to-content + focus-visible</li>
+            <li>Responsive to 320px</li>
+          </ul>
+
+          <p class="taught"><span class="taught__label">Taught me</span> directory-based i18n that actually scales, custom particle systems that pause when off-screen, and how to set up a real branch-based deployment pipeline.</p>
+
+          <p class="status"><span class="status__dot status__dot--paused"></span> Live URL being restored — site is in a polish pass.</p>
+        </div>
+      </article>
+
+      <!-- Project 3: Малки Подаръчета -->
+      <article class="project" id="project-malki">
+        <div class="container container--narrow">
+          <div class="project__image">
+            <img src="assets/project-malki.svg" alt="Малки Подаръчета — Next.js E-commerce. Placeholder graphic with confetti pattern on a dark background." loading="lazy">
+          </div>
+          <header class="project__header">
+            <h3 class="project__title">Малки Подаръчета</h3>
+            <p class="project__tag"><span class="tag">Next.js E-commerce · 81 pages</span></p>
+            <p class="project__quote">"Built for my wife's handmade-gifts business. Real e-commerce, real customers, real orders coming in."</p>
+          </header>
+
+          <div class="project__body">
+            <h4>The problem</h4>
+            <p>My wife founded a handmade-gifts business for children's events (christenings, birthdays, gender reveals). She needed a real online presence with a real ordering flow — not a Facebook DM stream.</p>
+
+            <h4>What I built</h4>
+            <p>A full Next.js 15 e-commerce site with <strong>81 static pages</strong>: a 3-step customization wizard (event → theme → products → personalization → preview), 6 event types × 10 themes = 60 combo pages, an interactive budget calculator, a cart that persists in localStorage <em>and</em> can be shared via URL (base64-encoded), automatic volume discounts (5 / 10 / 15% tiers based on quantity), and an "express order" option that prefixes the order email with ⚡ СПЕШНА.</p>
+
+            <h4>How I built it</h4>
+            <p>Vibe-coded with <strong>Claude Code / Codex</strong>. Next.js App Router with static export, Tailwind CSS, React Hook Form. Web3Forms for orders + contact, Calendly for consultations, Cloudflare R2 for images. Custom design system (color palette, Marck Script for Cyrillic decorative type). Comprehensive JSON-LD schemas (<code>LocalBusiness</code>, <code>Person</code>, <code>FAQPage</code>, <code>BreadcrumbList</code>, <code>AggregateOffer</code>).</p>
+          </div>
+
+          <ul class="proof" role="list">
+            <li>81 static pages</li>
+            <li>60 customize combinations</li>
+            <li>17-question FAQ + schema</li>
+            <li>GDPR cookie consent</li>
+            <li>Confetti on order success</li>
+            <li>GEO score ~85 / 100</li>
+          </ul>
+
+          <p class="taught"><span class="taught__label">Taught me</span> Next.js static export, e-commerce flows without payment processors (deliberately bank-transfer-only — fits the local market), and how thorough SEO / GEO compounds month over month.</p>
+
+          <p class="status"><span class="status__dot status__dot--paused"></span> Live URL being restored — site is in a polish pass.</p>
+        </div>
+      </article>
+
+      <!-- Project 4: Nova Control (Magnum Opus) -->
+      <article class="project project--flagship" id="project-novacontrol">
+        <div class="container container--narrow">
+          <div class="project__image">
+            <img src="assets/project-novacontrol.svg" alt="Nova Control — Industrial Desktop App. Placeholder graphic with SCADA-style grid and status indicators." loading="lazy">
+          </div>
+          <header class="project__header">
+            <p class="project__flagship-label">Magnum Opus</p>
+            <h3 class="project__title">Nova Control: Concrete Plant Dispatcher</h3>
+            <p class="project__tag"><span class="tag">Python Desktop App · 14 modules · 496 passing tests</span></p>
+            <p class="project__quote">"My personal magnum opus. The most ambitious thing I've built — a Windows desktop app reading a real industrial PLC."</p>
+          </header>
+
+          <div class="project__body">
+            <h4>The problem</h4>
+            <p>Bulgarian concrete plants run on Soviet-era dispatcher software with brittle UIs and no modern features. Operators are often elderly. They need a modern, monitor-only dispatcher that reads the existing Omron PLCs without ever risking a write to the live process — a single bad write to a concrete batching PLC could damage equipment or hurt people.</p>
+
+            <h4>What I built</h4>
+            <p>A Windows desktop application (<code>.exe</code>) that interfaces with Omron CJ1M-CPU11 / CJ2M-CPU32 PLCs over <strong>FINS / UDP, FINS / Serial, and Host Link</strong> — strictly READ-ONLY (the driver base class doesn't even <em>expose</em> write methods). 8 tabs covering Settings, Reports, Invoices, Production Management, Clients, SCADA Operator Screen, Requests, and Dispatcher (default). Recipe immutability for anti-fraud, hardware-bound licensing with offline grace, auto-database backups (180 retained), 3-tier polling (200&nbsp;ms / 500&nbsp;ms / 2000&nbsp;ms) with staleness detection, full Bulgarian UI with high contrast and large fonts for elderly operators.</p>
+
+            <h4>How I built it</h4>
+            <p>Python + PyQt6 + SQLite + a custom Omron driver layer. Architected as 14 independent modules with strict dependency boundaries enforced by Qt signal/slot communication. Documented in <code>MASTER_PROMPT.md</code> and <code>architecture.md</code> — long-form specs that double as agent-handoff documents so any new AI session can pick up where the last one left off.</p>
+          </div>
+
+          <ul class="proof proof--flagship" role="list">
+            <li><strong>14</strong> modules built</li>
+            <li><strong>496</strong> passing tests</li>
+            <li>Phase 4 of 5 in progress</li>
+            <li>Read-only at API level</li>
+            <li>Multi-plant profile system</li>
+            <li>Full Bulgarian operator UI</li>
+          </ul>
+
+          <p class="taught"><span class="taught__label">Taught me</span> long-form architecture documentation that survives across AI sessions, enforcement of safety contracts at the type / API level, and the discipline to <em>not ship</em> something safety-critical until the tooling is ready.</p>
+
+          <div class="status status--callout">
+            <p class="status__heading"><span class="status__dot status__dot--paused"></span> Currently paused near the finish line.</p>
+            <p>The remaining work is safety-critical UI integration where I want to evaluate the next generation of models before I trust them with code that controls heavy industrial equipment. Knowing where today's AI breaks is itself an AI Orchestrator skill — and "ship something half-baked" is not the right answer for software like this.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 5. HOW I WORK -->
+    <section class="section section--how" id="how" aria-labelledby="how-label">
+      <div class="container container--narrow">
+        <p class="section-label" id="how-label">How I work</p>
+        <h2 class="section__title">The orchestration is the skill.</h2>
+        <p class="section__lead">I describe outcomes in plain English. I think in problems, not syntax. I let Claude Code translate intent into working code, then I review, test, and iterate. The skill is in the orchestration: knowing what to ask, when to redirect, how to read a model's output critically, when to switch tools, and when a problem is too hard for current AI.</p>
+        <p class="section__lead">My projects use real engineering practice: <strong>3-branch deployments</strong> (alpha&nbsp;→&nbsp;beta&nbsp;→&nbsp;main), <strong>test-driven development</strong> (Nova Control alone has 496 passing tests), <strong>modular architecture</strong> with clear dependency boundaries, and READMEs that double as agent-handoff documents — so any AI session can pick up where the last one stopped without losing context.</p>
+        <p class="section__lead">I ship real products. I deploy them. I maintain them when bugs come in. I prompt in English. The output is software that works.</p>
+      </div>
+    </section>
+
+    <!-- 6. CONTACT -->
+    <section class="section section--contact" id="contact" aria-labelledby="contact-label">
+      <div class="container container--narrow">
+        <p class="section-label" id="contact-label">Contact</p>
+        <h2 class="section__title">Drop me a line.</h2>
+        <p class="section__lead">Open to AI Orchestrator / no-code developer / AI integration roles.</p>
+        <ul class="contact-list" role="list">
+          <li>
+            <button class="contact-card" type="button" data-copy="reversebite@gmail.com" aria-label="Copy email address to clipboard">
+              <span class="contact-card__label">Email</span>
+              <span class="contact-card__value">reversebite@gmail.com</span>
+              <span class="contact-card__hint" data-hint-default="Click to copy" data-hint-copied="Copied ✓">Click to copy</span>
+            </button>
+          </li>
+          <li>
+            <a class="contact-card" href="https://www.linkedin.com/in/victortserovski/" target="_blank" rel="noopener noreferrer">
+              <span class="contact-card__label">LinkedIn</span>
+              <span class="contact-card__value">linkedin.com/in/victortserovski</span>
+              <span class="contact-card__hint">Open profile ↗</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container container--narrow">
+      <p class="footer__credit">Vibe-coded with <strong>Claude Code</strong>. Hosted on <strong>GitHub Pages</strong>.</p>
+      <p class="footer__copy">© 2026 Victor Tserovski</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
