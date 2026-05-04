@@ -31,6 +31,79 @@
     revealTargets.forEach((el) => io.observe(el));
   }
 
+  /* ---- Count-up animation ---- */
+  const countUpTargets = document.querySelectorAll('[data-countup]');
+
+  function animateCountUp(el, target) {
+    const duration = 1500;
+    const start = performance.now();
+
+    function step(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // easeOutCubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target);
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = target;
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+    // Numbers stay as-is (already showing final values)
+  } else {
+    // Set initial display to 0
+    countUpTargets.forEach((el) => { el.textContent = '0'; });
+
+    const countUpObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.dataset.countup, 10);
+            animateCountUp(el, target);
+            countUpObserver.unobserve(el);
+          }
+        });
+      },
+      { rootMargin: '0px 0px -5% 0px', threshold: 0.3 }
+    );
+    countUpTargets.forEach((el) => countUpObserver.observe(el));
+  }
+
+  /* ---- Email copy confetti ---- */
+  function spawnConfetti(originEl) {
+    if (prefersReducedMotion) return;
+
+    const rect = originEl.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    const colors = ['#3b82f6', '#60a5fa', '#e88da0', '#f59e0b', '#10b981', '#8b7355'];
+    const count = 7;
+
+    for (let i = 0; i < count; i++) {
+      const particle = document.createElement('span');
+      particle.className = 'confetti-particle';
+      particle.style.left = cx + 'px';
+      particle.style.top = cy + 'px';
+      particle.style.background = colors[i % colors.length];
+
+      const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.8;
+      const distance = 25 + Math.random() * 45;
+      particle.style.setProperty('--tx', Math.cos(angle) * distance + 'px');
+      particle.style.setProperty('--ty', (Math.sin(angle) * distance + 20) + 'px');
+      particle.style.setProperty('--rot', (Math.random() * 360) + 'deg');
+
+      document.body.appendChild(particle);
+      particle.addEventListener('animationend', () => particle.remove());
+    }
+  }
+
   /* ---- Click-to-copy contact card ---- */
   const copyButtons = document.querySelectorAll('[data-copy]');
   copyButtons.forEach((btn) => {
@@ -57,6 +130,7 @@
         }
         btn.classList.add('is-copied');
         if (hint) hint.textContent = copied;
+        spawnConfetti(btn);
         setTimeout(() => {
           btn.classList.remove('is-copied');
           if (hint) hint.textContent = original;

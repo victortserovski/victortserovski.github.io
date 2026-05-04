@@ -18,6 +18,7 @@ html {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+    animation-delay: 0s !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -230,6 +231,18 @@ strong { font-weight: 600; }
   50%      { transform: translateX(-50%) translateY(8px); }
 }
 
+/* ---- Hero entrance stagger ---- */
+@keyframes hero-enter {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero__photo     { animation: hero-enter 0.7s  cubic-bezier(0.16, 1, 0.3, 1) both 0s; }
+.hero__name      { animation: hero-enter 0.6s  cubic-bezier(0.16, 1, 0.3, 1) both 0.12s; }
+.hero__headline  { animation: hero-enter 0.7s  cubic-bezier(0.16, 1, 0.3, 1) both 0.22s; }
+.hero__sub       { animation: hero-enter 0.65s cubic-bezier(0.16, 1, 0.3, 1) both 0.38s; }
+.hero__cta       { animation: hero-enter 0.6s  cubic-bezier(0.16, 1, 0.3, 1) both 0.52s; }
+.hero__scroll    { animation: hero-enter 0.5s  cubic-bezier(0.16, 1, 0.3, 1) both 0.7s, hero-bounce 2.4s infinite ease-in-out 1.2s; }
+
 /* ---- Buttons ---- */
 .btn {
   display: inline-flex;
@@ -342,6 +355,7 @@ strong { font-weight: 600; }
 }
 
 .project__image {
+  position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border);
@@ -350,6 +364,98 @@ strong { font-weight: 600; }
   aspect-ratio: 16 / 9;
 }
 .project__image img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---- Project hover FX overlays ---- */
+.project__fx {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Fake Discount: price chart line draw */
+.project__fx--extension .fx-line {
+  stroke: #3b82f6;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  transition: stroke-dashoffset 1.2s ease-out;
+}
+.project__fx--extension .fx-dot {
+  fill: #3b82f6;
+  opacity: 0;
+  transition: opacity 0.3s ease-out 1s;
+}
+.project:hover .project__fx--extension .fx-line { stroke-dashoffset: 0; }
+.project:hover .project__fx--extension .fx-dot  { opacity: 1; }
+
+/* SIMA-MA: particle drift */
+.project__fx--sima .fx-particle {
+  fill: #8b7355;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: opacity 0.4s ease;
+}
+.project:hover .project__fx--sima .fx-particle {
+  opacity: 0.6;
+  animation: particle-drift 2.5s ease-in-out infinite alternate;
+}
+.project:hover .project__fx--sima .fx-particle:nth-child(2) { animation-delay: 0.4s; }
+.project:hover .project__fx--sima .fx-particle:nth-child(3) { animation-delay: 0.8s; }
+.project:hover .project__fx--sima .fx-particle:nth-child(4) { animation-delay: 0.2s; }
+.project:hover .project__fx--sima .fx-particle:nth-child(5) { animation-delay: 0.6s; }
+.project:hover .project__fx--sima .fx-particle:nth-child(6) { animation-delay: 1.0s; }
+@keyframes particle-drift {
+  0%   { transform: translateY(0) scale(1); opacity: 0.6; }
+  100% { transform: translateY(-12px) scale(1.2); opacity: 0.3; }
+}
+
+/* Малки Подаръчета: confetti float */
+.project__fx--malki .fx-confetti {
+  fill: #e88da0;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: opacity 0.4s ease;
+}
+.project:hover .project__fx--malki .fx-confetti {
+  opacity: 0.55;
+  animation: confetti-float 2.8s ease-in-out infinite alternate;
+}
+.project:hover .project__fx--malki .fx-confetti:nth-child(2) { animation-delay: 0.35s; }
+.project:hover .project__fx--malki .fx-confetti:nth-child(3) { animation-delay: 0.7s; }
+.project:hover .project__fx--malki .fx-confetti:nth-child(4) { animation-delay: 0.15s; }
+.project:hover .project__fx--malki .fx-confetti:nth-child(5) { animation-delay: 0.5s; }
+.project:hover .project__fx--malki .fx-confetti:nth-child(6) { animation-delay: 0.9s; }
+@keyframes confetti-float {
+  0%   { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.55; }
+  100% { transform: translateY(-14px) rotate(25deg) scale(1.15); opacity: 0.25; }
+}
+
+/* Nova Control: SCADA status dot cycling */
+.project__fx--nova .fx-scada {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.project:hover .project__fx--nova .fx-scada {
+  opacity: 0.85;
+}
+.project:hover .project__fx--nova .fx-scada:nth-child(1) { animation: scada-cycle-1 2s ease-in-out infinite; }
+.project:hover .project__fx--nova .fx-scada:nth-child(2) { animation: scada-cycle-2 2s ease-in-out infinite 0.3s; }
+.project:hover .project__fx--nova .fx-scada:nth-child(3) { animation: scada-cycle-3 2s ease-in-out infinite 0.6s; }
+@keyframes scada-cycle-1 {
+  0%, 100% { fill: #10b981; } 50% { fill: #f59e0b; }
+}
+@keyframes scada-cycle-2 {
+  0%, 100% { fill: #f59e0b; } 50% { fill: #10b981; }
+}
+@keyframes scada-cycle-3 {
+  0%, 100% { fill: #10b981; } 50% { fill: #f59e0b; }
+}
 
 .project__header { margin-bottom: 1.5rem; }
 
@@ -557,6 +663,19 @@ code {
   100% { opacity: 0;   transform: scale(2.5); }
 }
 
+/* ---- Magnum Opus: slower heartbeat pulse ---- */
+.status__dot--opus::before {
+  animation-duration: 3.5s;
+}
+.status__subtitle {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin-bottom: 0.75rem;
+  opacity: 0.8;
+}
+
 /* =========================================================================
    5. HOW I WORK
    ========================================================================= */
@@ -655,6 +774,24 @@ code {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* =========================================================================
+   EMAIL COPY CONFETTI
+   ========================================================================= */
+.confetti-particle {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 9999;
+  animation: confetti-burst 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+@keyframes confetti-burst {
+  0%   { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  70%  { opacity: 1; }
+  100% { transform: translate(var(--tx), var(--ty)) rotate(var(--rot)) scale(0.3); opacity: 0; }
 }
 
 /* =========================================================================
