@@ -35,7 +35,7 @@
   const countUpTargets = document.querySelectorAll('[data-countup]');
 
   function animateCountUp(el, target) {
-    const duration = 1500;
+    const duration = 2500;
     const start = performance.now();
 
     function step(now) {
@@ -71,7 +71,7 @@
           }
         });
       },
-      { rootMargin: '0px 0px -5% 0px', threshold: 0.3 }
+      { rootMargin: '0px 0px -15% 0px', threshold: 0.8 }
     );
     countUpTargets.forEach((el) => countUpObserver.observe(el));
   }

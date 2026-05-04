@@ -36,7 +36,7 @@
         <div class="hero__content">
           <p class="hero__name">Victor Tserovski</p>
           <h1 class="hero__headline">I ship full-stack products by <span class="accent">orchestrating AI</span>.</h1>
-          <p class="hero__sub">Two websites, one Chrome extension, and an industrial desktop app with <strong>496 passing tests</strong>. Built with Anthropic Claude Code, OpenAI Codex, and Google Antigravity&nbsp;— without writing code by hand.</p>
+          <p class="hero__sub">Two websites, one Chrome extension, and an industrial desktop app with <strong>496 passing tests</strong>. Built with Claude Code, Cursor, Codex, and Google Antigravity&nbsp;— without writing code by hand.</p>
           <div class="hero__cta">
             <a class="btn btn--primary" href="#projects">See projects</a>
             <a class="btn btn--ghost" href="#contact">Get in touch</a>
@@ -53,7 +53,7 @@
       <div class="container container--narrow">
         <p class="section-label" id="about-label">About</p>
         <p class="section__lead">I work at <strong>NielsenIQ</strong> as a <strong>Data Deployment Expert</strong>. I've never been a developer. Over the past <strong>18 months</strong> I've shipped four real products by orchestrating AI tools — from a polished Next.js e-commerce site to a Python desktop app talking to industrial hardware.</p>
-        <p class="section__lead">Coding without AI is starting to feel like doing math without a calculator — still possible, but no longer where the leverage is. The way software gets built is changing. I'm not waiting for permission — I'm learning, shipping, and getting better every week.</p>
+        <p class="section__lead">Coding without AI is starting to feel like doing math without a calculator. The way software gets built is changing, and I am focused on learning, adapting, and shipping products that work.</p>
       </div>
     </section>
 
@@ -63,8 +63,9 @@
         <p class="section-label" id="toolbelt-label">Toolbelt</p>
         <h2 class="section__title">The AI stack I orchestrate.</h2>
         <ul class="toolbelt-grid" role="list">
-          <li class="tool"><span class="tool__name">Anthropic Claude Code</span><span class="tool__sub">primary</span></li>
-          <li class="tool"><span class="tool__name">OpenAI Codex</span></li>
+          <li class="tool"><span class="tool__name">Claude Code</span><span class="tool__sub">primary</span></li>
+          <li class="tool"><span class="tool__name">Cursor</span><span class="tool__sub">editor</span></li>
+          <li class="tool"><span class="tool__name">Codex</span></li>
           <li class="tool"><span class="tool__name">Google Antigravity</span></li>
           <li class="tool"><span class="tool__name">Python + PyQt6</span><span class="tool__sub">desktop</span></li>
           <li class="tool"><span class="tool__name">Next.js + Tailwind</span><span class="tool__sub">web</span></li>
@@ -74,7 +75,6 @@
           <li class="tool"><span class="tool__name">Netlify · GitHub Pages</span><span class="tool__sub">deploy</span></li>
         </ul>
         <p class="note">These are the tools I use to ship real products. The list grows with each new project — different needs call for different tools.</p>
-        <p class="note">I prompt in English by default. LLMs perform measurably better in English than in Bulgarian — language fluency is part of the toolkit, not separate from it.</p>
       </div>
     </section>
 
@@ -98,7 +98,7 @@
           <header class="project__header">
             <h3 class="project__title">Fake Discount BG</h3>
             <p class="project__tag"><span class="tag">Chrome Extension</span></p>
-            <p class="project__quote">"Bulgarian e-commerce inflates prices before Black Friday and fakes the discounts. Now my browser tells me when they're lying."</p>
+            <p class="project__quote">"Bulgarian e-commerce inflates prices before Black Friday and fakes the discounts. Now my browser catches the manipulated prices."</p>
           </header>
 
           <div class="project__body">
@@ -106,10 +106,10 @@
             <p>During sale events, Bulgarian retailers (Emag, Ozone, Notino) raise prices days before the "discount" so the slashed price looks bigger than it is. There was no easy way to tell what was real.</p>
 
             <h4>What I built</h4>
-            <p>A Chrome/Edge extension (Manifest&nbsp;V3) that auto-tracks every product I visit. After 7+ days of tracking, it gives a verdict directly on the product page: <strong>Fake discount / Real deal / Stable price / Still tracking</strong> — with reasoning text and an SVG price chart embedded into the page itself. Per-tab badge: <code>!</code> for fake, <code>✓</code> for real, <code>🎯</code> when a price target is hit.</p>
+            <p>A Chrome/Edge extension (Manifest&nbsp;V3) that auto-tracks every product I visit. After 7+ days of tracking, it gives a verdict directly on the product page: <strong>Fake discount / Real deal / Stable price / Still tracking</strong> — with reasoning text and an SVG price chart embedded into the page itself. Per-tab badges indicate fake discounts, real deals, and reached price targets.</p>
 
             <h4>How I built it</h4>
-            <p>Vibe-coded with <strong>Anthropic Claude Code</strong>. Site-specific content scripts (Emag / Ozone / Notino) sharing a common base class. Background service worker for message routing and analysis. Per-product Chrome local storage with O(1) reads and a write queue to prevent race conditions on rapid reloads. EAN / GTIN extraction enables future cross-site matching.</p>
+            <p>Built using <strong>Claude Code</strong>. Site-specific content scripts (Emag / Ozone / Notino) sharing a common base class. Background service worker for message routing and analysis. Per-product Chrome local storage with O(1) reads and a write queue to prevent race conditions on rapid reloads. EAN / GTIN extraction enables future cross-site matching.</p>
           </div>
 
           <ul class="proof" role="list">
@@ -155,7 +155,7 @@
             <p>A 13-page bilingual website with directory-based i18n (<code>/bg/</code> and <code>/en/</code>), a custom canvas particles animation themed to the industry (gravel / sand / cement), a 79-photo gallery with category accordions and lightbox, a fully styled EU-funded project page with 16 mandatory PDF documents, and a validated contact form.</p>
 
             <h4>How I built it</h4>
-            <p>Vibe-coded with <strong>Anthropic Claude Code / OpenAI Codex</strong>. Static HTML + CSS + vanilla JS — no framework. Web3Forms for the contact form, Cloudflare R2 for image hosting (zero egress), Netlify deployment with a 3-branch strategy (alpha&nbsp;→&nbsp;beta&nbsp;→&nbsp;main).</p>
+            <p>Architected with <strong>Claude Code</strong> and <strong>Codex</strong>. Static HTML + CSS + vanilla JS — no framework. Web3Forms for the contact form, Cloudflare R2 for image hosting (zero egress), Netlify deployment with a 3-branch strategy (alpha&nbsp;→&nbsp;beta&nbsp;→&nbsp;main).</p>
           </div>
 
           <ul class="proof" role="list">
@@ -201,7 +201,7 @@
             <p>A full Next.js 15 e-commerce site with <strong>81 static pages</strong>: a 3-step customization wizard (event → theme → products → personalization → preview), 6 event types × 10 themes = 60 combo pages, an interactive budget calculator, a cart that persists in localStorage <em>and</em> can be shared via URL (base64-encoded), automatic volume discounts (5 / 10 / 15% tiers based on quantity), and an "express order" option that prefixes the order email with ⚡ СПЕШНА.</p>
 
             <h4>How I built it</h4>
-            <p>Vibe-coded with <strong>Anthropic Claude Code / OpenAI Codex</strong>. Next.js App Router with static export, Tailwind CSS, React Hook Form. Web3Forms for orders + contact, Calendly for consultations, Cloudflare R2 for images. Custom design system (color palette, Marck Script for Cyrillic decorative type). Comprehensive JSON-LD schemas (<code>LocalBusiness</code>, <code>Person</code>, <code>FAQPage</code>, <code>BreadcrumbList</code>, <code>AggregateOffer</code>).</p>
+            <p>Built using <strong>Claude Code</strong> and <strong>Codex</strong>. Next.js App Router with static export, Tailwind CSS, React Hook Form. Web3Forms for orders + contact, Calendly for consultations, Cloudflare R2 for images. Custom design system (color palette, Marck Script for Cyrillic decorative type). Comprehensive JSON-LD schemas (<code>LocalBusiness</code>, <code>Person</code>, <code>FAQPage</code>, <code>BreadcrumbList</code>, <code>AggregateOffer</code>).</p>
           </div>
 
           <ul class="proof" role="list">
@@ -231,10 +231,10 @@
             </svg>
           </div>
           <header class="project__header">
-            <p class="project__flagship-label">Magnum Opus</p>
+            <p class="project__flagship-label">Flagship Project</p>
             <h3 class="project__title">Nova Control: Concrete Plant Dispatcher</h3>
             <p class="project__tag"><span class="tag">Python Desktop App · 14 modules · 496 passing tests</span></p>
-            <p class="project__quote">"My personal magnum opus. The most ambitious thing I've built — a Windows desktop app reading a real industrial PLC."</p>
+            <p class="project__quote">"The most ambitious system I've built — a Windows desktop app reading live data from a real industrial PLC."</p>
           </header>
 
           <div class="project__body">
@@ -245,7 +245,7 @@
             <p>A Windows desktop application (<code>.exe</code>) that interfaces with Omron CJ1M-CPU11 / CJ2M-CPU32 PLCs over <strong>FINS / UDP, FINS / Serial, and Host Link</strong> — strictly READ-ONLY (the driver base class doesn't even <em>expose</em> write methods). 8 tabs covering Settings, Reports, Invoices, Production Management, Clients, SCADA Operator Screen, Requests, and Dispatcher (default). Recipe immutability for anti-fraud, hardware-bound licensing with offline grace, auto-database backups (180 retained), 3-tier polling (200&nbsp;ms / 500&nbsp;ms / 2000&nbsp;ms) with staleness detection, full Bulgarian UI with high contrast and large fonts for elderly operators.</p>
 
             <h4>How I built it</h4>
-            <p>Python + PyQt6 + SQLite + a custom Omron driver layer. Architected as 14 independent modules with strict dependency boundaries enforced by Qt signal/slot communication. Documented in long-form internal specs (a <code>CLAUDE.md</code>-style agent-handoff map) so any new AI session picks up where the last one left off — without losing context on the safety constraints or the module dependency graph.</p>
+            <p>Built with <strong>Cursor</strong> and <strong>Claude Opus</strong>. Python + PyQt6 + SQLite + a custom Omron driver layer. Architected as 14 independent modules with strict dependency boundaries enforced by Qt signal/slot communication. Documented in long-form internal specs (a <code>CLAUDE.md</code>-style agent-handoff map) so any new AI session picks up where the last one left off — without losing context on the safety constraints or the module dependency graph.</p>
           </div>
 
           <ul class="proof proof--flagship" role="list">
@@ -261,8 +261,8 @@
 
           <div class="status status--callout">
             <p class="status__heading"><span class="status__dot status__dot--paused status__dot--opus"></span> Currently paused near the finish line.</p>
-            <p class="status__subtitle">paused — evaluating next-gen models before trusting safety-critical code</p>
-            <p>The remaining work is safety-critical UI integration where I want to evaluate the next generation of models before I trust them with code that controls heavy industrial equipment. Knowing where today's AI breaks is itself an AI Orchestrator skill — and "ship something half-baked" is not the right answer for software like this.</p>
+            <p class="status__subtitle">paused — evaluating next-gen models for safety-critical UI</p>
+            <p>The remaining work involves safety-critical UI integration. I am deliberately pausing to evaluate next-generation models before executing complex, high-stakes visual logic.</p>
           </div>
         </div>
       </article>
@@ -273,9 +273,9 @@
       <div class="container container--narrow">
         <p class="section-label" id="how-label">How I work</p>
         <h2 class="section__title">The orchestration is the skill.</h2>
-        <p class="section__lead">I describe outcomes in plain English. I think in problems, not syntax. I let Claude Code translate intent into working code, then I review, test, and iterate. The skill is in the orchestration: knowing what to ask, when to redirect, how to read a model's output critically, when to switch tools, and when a problem is too hard for current AI.</p>
+        <p class="section__lead">I describe outcomes in plain English. I let AI translate intent into working code, then I review, test, and iterate. The core skill is orchestration: knowing what to ask, how to read a model's output critically, when to switch tools, and when a problem requires a different approach.</p>
         <p class="section__lead">My projects use real engineering practice: <strong>3-branch deployments</strong> (alpha&nbsp;→&nbsp;beta&nbsp;→&nbsp;main), <strong>test-driven development</strong> (Nova Control alone has 496 passing tests), <strong>modular architecture</strong> with clear dependency boundaries, and <code>CLAUDE.md</code> files that act as agent-handoff documents — so any new Claude Code session picks up where the last one stopped without losing context.</p>
-        <p class="section__lead">I ship real products. I deploy them. I maintain them when bugs come in. I prompt in English. The output is software that works.</p>
+        <p class="section__lead">I take ownership of the entire lifecycle — from architectural planning to deployment and bug fixing. The end result isn't just generated code; it's robust software that solves actual business needs.</p>
       </div>
     </section>
 
@@ -315,7 +315,7 @@
 
   <footer class="footer">
     <div class="container container--narrow">
-      <p class="footer__credit">Vibe-coded with <strong>Anthropic Claude Code</strong>. Hosted on <strong>GitHub Pages</strong>.</p>
+      <p class="footer__credit">Built using <strong>Claude Code</strong>. Hosted on <strong>GitHub Pages</strong>.</p>
       <p class="footer__copy">© 2026 Victor Tserovski</p>
     </div>
   </footer>
