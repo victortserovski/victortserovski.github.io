@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#0a0a0a">
 
   <title>Victor Tserovski — AI Orchestrator</title>
-  <meta name="description" content="I ship full-stack products by orchestrating AI. Two websites, one Chrome extension, and an industrial desktop app with 496 passing tests. Built with Anthropic Claude Code, OpenAI Codex, and Google Antigravity — without writing code by hand.">
+  <meta name="description" content="I build working software by orchestrating AI. Two websites, one Chrome extension, and an industrial desktop app with 496 passing tests. Built with Anthropic Claude Code, OpenAI Codex, and Google Antigravity — without writing code by hand.">
 
   <meta property="og:title" content="Victor Tserovski — AI Orchestrator">
-  <meta property="og:description" content="I ship full-stack products by orchestrating AI.">
+  <meta property="og:description" content="I build working software by orchestrating AI.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://victortserovski.github.io">
   <meta name="twitter:card" content="summary_large_image">
@@ -35,7 +35,7 @@
         </div>
         <div class="hero__content">
           <p class="hero__name">Victor Tserovski</p>
-          <h1 class="hero__headline">I ship full-stack products by <span class="accent">orchestrating AI</span>.</h1>
+          <h1 class="hero__headline">I build working software by <span class="accent">orchestrating AI</span>.</h1>
           <p class="hero__sub">Two websites, one Chrome extension, and an industrial desktop app with <strong>496 passing tests</strong>. Built with Claude Code, Cursor, Codex, and Google Antigravity&nbsp;— without writing code by hand.</p>
           <div class="hero__cta">
             <a class="btn btn--primary" href="#projects">See projects</a>
@@ -53,7 +53,7 @@
       <div class="container container--narrow">
         <p class="section-label" id="about-label">About</p>
         <p class="section__lead">I work at <strong>NielsenIQ</strong> as a <strong>Data Deployment Expert</strong>. I've never been a developer. Over the past <strong>18 months</strong> I've shipped four real products by orchestrating AI tools — from a polished Next.js e-commerce site to a Python desktop app talking to industrial hardware.</p>
-        <p class="section__lead">Coding without AI is starting to feel like doing math without a calculator. The way software gets built is changing, and I am focused on learning, adapting, and shipping products that work.</p>
+        <p class="section__lead">Building software without AI is starting to feel like doing math without a calculator. I've never been a developer, but I know how to break down complex problems, prompt AI models effectively, and rigorously test the results to ship real products.</p>
       </div>
     </section>
 
@@ -75,7 +75,7 @@
           <li class="tool"><span class="tool__name">Web3Forms</span><span class="tool__sub">email</span></li>
           <li class="tool"><span class="tool__name">Netlify · GitHub Pages</span><span class="tool__sub">deploy</span></li>
         </ul>
-        <p class="note">These are the tools I use to ship real products. The list grows with each new project — different needs call for different tools.</p>
+        <p class="note">I don't write these frameworks by hand—I use AI to write them. My actual stack is the AI models and IDEs I use to orchestrate the work. The list grows with each new project.</p>
       </div>
     </section>
 
@@ -112,10 +112,10 @@
             <p>During sale events, Bulgarian retailers (<a href="https://www.emag.bg/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Emag</a>, <a href="https://www.ozone.bg/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Ozone</a>, <a href="https://www.notino.bg/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Notino</a>) raise prices days before the "discount" so the slashed price looks bigger than it is. There was no easy way to tell what was real.</p>
 
             <h4>What I built</h4>
-            <p>A Chrome/Edge extension that auto-tracks every product I visit, giving a verdict directly on the product page: <strong>Fake discount / Real deal / Stable price / Still tracking</strong> — with reasoning text and an SVG price chart embedded into the page. It outclasses similar tools by performing background EAN extraction and cross-referencing prices via a backend Supabase table that automatically records data points when a user lands on a product. I also built a bot and data protection rules directly inside Supabase so scraping scripts cannot extract the database.</p>
+            <p>A Chrome/Edge extension that auto-tracks every product I visit, giving a verdict directly on the product page: <strong>Fake discount / Real deal / Stable price / Still tracking</strong> — with reasoning text and an SVG price chart embedded into the page. It works differently from similar tools by performing background EAN extraction and cross-referencing prices via a backend Supabase table that automatically records data points when a user lands on a product. I also built a bot and data protection rules directly inside Supabase so scraping scripts cannot extract the database.</p>
 
             <h4>How I built it</h4>
-            <p>Built using <strong>Claude Code</strong>. Site-specific content scripts sharing a common base class. Background service worker for message routing and analysis. Per-product Chrome local storage with O(1) reads and a write queue to prevent race conditions on rapid reloads.</p>
+            <p>Built using <strong>Claude Code</strong>. I didn't write the Chrome Extension APIs myself. Instead, I focused on defining the exact logic the AI needed to follow: how to extract prices, when to flag a fake discount, and how to store the history. My main challenge was testing the extension repeatedly on strict sites like Ozone.bg and adjusting my prompts until the AI generated a stable background architecture.</p>
           </div>
 
           <h4>Key Features</h4>
@@ -130,7 +130,7 @@
             <li>Persistent filters</li>
           </ul>
 
-          <p class="taught"><span class="taught__label">The Orchestration Challenge</span> Getting the AI to understand and respect content-script CSP isolation on strict sites like Ozone, while designing a robust background messaging architecture that handles multi-day data-collection without race conditions.</p>
+          <p class="taught"><span class="taught__label">The Orchestration Challenge</span> Testing and iterating against strict website security rules, and defining clear constraints so the AI could build a robust messaging architecture that handles multi-day data-collection without breaking.</p>
         </div>
       </article>
 
@@ -165,7 +165,7 @@
             <p>A 13-page bilingual website with directory-based i18n (<code>/bg/</code> and <code>/en/</code>), a custom canvas particles animation themed to the industry (gravel / sand / cement), a 79-photo gallery with category accordions and lightbox, a fully styled EU-funded project page with 16 mandatory PDF documents, and an integration of Web3Forms with anti-spam protection.</p>
 
             <h4>How I built it</h4>
-            <p>Architected with <strong>Claude Code</strong> and <strong>Codex</strong>. Static HTML + CSS + vanilla JS — no framework. Web3Forms for the contact form, Cloudflare R2 for image hosting (zero egress), Netlify deployment with a 3-branch strategy (alpha&nbsp;→&nbsp;beta&nbsp;→&nbsp;main).</p>
+            <p>Architected with <strong>Claude Code</strong> and <strong>Codex</strong>. I instructed Claude to build the site using only basic HTML, CSS, and JavaScript so it would be fast and easy to host. The hardest part was getting the AI to perfectly translate my visual ideas (like the particle animation) into working code, which took dozens of iterations and visual checks.</p>
           </div>
 
           <ul class="proof" role="list">
@@ -177,7 +177,7 @@
             <li>Responsive to 320px</li>
           </ul>
 
-          <p class="taught"><span class="taught__label">The Orchestration Challenge</span> Translating visual concepts like a custom particle system that pauses off-screen into code, and guiding the AI to implement a scalable directory-based i18n structure without relying on heavy frameworks.</p>
+          <p class="taught"><span class="taught__label">The Orchestration Challenge</span> Translating visual concepts like a custom particle system into precise prompts, and guiding the AI to build a bilingual site structure without relying on heavy frameworks.</p>
         </div>
       </article>
 
@@ -212,7 +212,7 @@
             <p>A full Next.js 15 e-commerce site with <strong>81 static pages</strong>: a 3-step customization wizard (event → theme → products → personalization → preview), 6 event types × 10 themes = 60 combo pages, an interactive budget calculator, a cart that persists in localStorage <em>and</em> can be shared via URL (base64-encoded), automatic volume discounts (5 / 10 / 15% tiers based on quantity), and an "express order" option that prefixes the order email with ⚡ СПЕШНА.</p>
 
             <h4>How I built it</h4>
-            <p>Built using <strong>Claude Code</strong> and <strong>Codex</strong>. Next.js App Router with static export, Tailwind CSS, React Hook Form. Web3Forms for orders + contact, Calendly for consultations, Cloudflare R2 for images. Custom design system (color palette, Marck Script for Cyrillic decorative type). Comprehensive JSON-LD schemas (<code>LocalBusiness</code>, <code>Person</code>, <code>FAQPage</code>, <code>BreadcrumbList</code>, <code>AggregateOffer</code>).</p>
+            <p>Built using <strong>Claude Code</strong> and <strong>Codex</strong>. This project required extremely complex business logic—60 different product combinations, automatic volume discounts, and a multi-step customization wizard. My job was breaking down these rules into plain English so the AI could build a Next.js app that didn't break. I also prioritized SEO, commanding the AI to implement technical schemas I researched online.</p>
           </div>
 
           <ul class="proof" role="list">
@@ -224,7 +224,7 @@
             <li>GEO score ~85 / 100</li>
           </ul>
 
-          <p class="taught"><span class="taught__label">The Orchestration Challenge</span> Coaxing Next.js into a purely static export while maintaining a complex 60-combination customization wizard, and heavily prioritizing comprehensive JSON-LD schemas for maximum GEO impact.</p>
+          <p class="taught"><span class="taught__label">The Orchestration Challenge</span> Mapping out a complex 60-combination customization wizard for the AI to build, and rigorously testing the output to ensure the cart and discount rules worked flawlessly across all edge cases.</p>
         </div>
       </article>
 
@@ -254,7 +254,7 @@
             <p>A Windows desktop application (<code>.exe</code>) that interfaces with Omron CJ1M-CPU11 / CJ2M-CPU32 PLCs over <strong>FINS / UDP, FINS / Serial, and Host Link</strong> — strictly READ-ONLY (the driver base class doesn't even <em>expose</em> write methods). 8 tabs covering Settings, Reports, Invoices, Production Management, Clients, SCADA Operator Screen, Requests, and Dispatcher (default). Recipe immutability for anti-fraud, hardware-bound licensing with offline grace, auto-database backups (180 retained), 3-tier polling (200&nbsp;ms / 500&nbsp;ms / 2000&nbsp;ms) with staleness detection, full Bulgarian UI with high contrast and large fonts for elderly operators.</p>
 
             <h4>How I built it</h4>
-            <p>Built with <strong>Cursor</strong> and <strong>Claude Opus</strong>. Python + PyQt6 + SQLite + a custom Omron driver layer. Architected as 14 independent modules with strict dependency boundaries enforced by Qt signal/slot communication. Current AI context windows aren't large enough to build a 20,000+ line application in one pass. To make it work, I use custom skills and detailed <code>.md</code> mapping files, allowing the AI to understand the entire module dependency graph and safely build a complex app module by module.</p>
+            <p>Built with <strong>Cursor</strong> and <strong>Claude Opus</strong>. Current AI context windows aren't large enough to build a 20,000+ line application in one pass. To make this work, my role was acting as the system architect. I wrote detailed <code>.md</code> mapping files that broke the app down into 14 separate modules. By feeding the AI exactly what it needed to know about the dependencies, and enforcing rigorous offline testing, I guided it to safely build a complex Windows app module by module without me writing the Python code.</p>
           </div>
 
           <ul class="proof proof--flagship" role="list">
@@ -266,7 +266,7 @@
             <li>Full Bulgarian operator UI</li>
           </ul>
 
-          <p class="taught"><span class="taught__label">The Orchestration Challenge</span> Managing a complex, multi-session state where the AI must respect safety contracts at the type and API level without hallucinations. It required rigorous prompting and the discipline to build an offline testing layer so the AI could iterate without touching the live PLC.</p>
+          <p class="taught"><span class="taught__label">The Orchestration Challenge</span> Managing a complex, multi-session state where the AI must respect safety contracts without hallucinations. It required rigorous prompting and the discipline to define an offline testing layer so the AI could iterate without touching the live PLC.</p>
 
           <div class="status status--callout">
             <p class="status__heading"><span class="status__dot status__dot--paused status__dot--opus"></span> Currently paused near the finish line.</p>
