@@ -40,7 +40,7 @@
           <div class="hero__cta">
             <a class="btn btn--primary" href="#projects">See projects</a>
             <a class="btn btn--ghost" href="#contact">Get in touch</a>
-            <button class="btn btn--ghost" type="button" id="download-resume" aria-label="Save this page as a PDF resume">Download resume</button>
+            <button class="btn btn--ghost" type="button" data-action="print" aria-label="Save this page as a PDF resume">Download resume</button>
           </div>
         </div>
       </div>
@@ -328,6 +328,13 @@
               <span class="contact-card__value">linkedin.com/in/victortserovski</span>
               <span class="contact-card__hint">Open profile ↗</span>
             </a>
+          </li>
+          <li>
+            <button class="contact-card" type="button" data-action="print" aria-label="Save this page as a PDF resume">
+              <span class="contact-card__label">Resume</span>
+              <span class="contact-card__value">Download as PDF</span>
+              <span class="contact-card__hint">Click to save ↓</span>
+            </button>
           </li>
         </ul>
       </div>
