@@ -40,6 +40,7 @@
           <div class="hero__cta">
             <a class="btn btn--primary" href="#projects">See projects</a>
             <a class="btn btn--ghost" href="#contact">Get in touch</a>
+            <button class="btn btn--ghost" type="button" id="download-resume" aria-label="Save this page as a PDF resume">Download resume</button>
           </div>
         </div>
       </div>
@@ -53,7 +54,7 @@
       <div class="container container--narrow">
         <p class="section-label" id="about-label">About</p>
         <p class="section__lead">I work at <strong>NielsenIQ</strong> as a <strong>Data Deployment Expert</strong>. I have not had a formal developer title, but I have spent the last <strong>18 months</strong> building and shipping real software products by orchestrating AI tools — from a polished Next.js e-commerce site to a Python desktop app talking to industrial hardware.</p>
-        <p class="section__lead">Building software without AI is starting to feel like doing math without a calculator. I did not follow a traditional path, but I built proof anyway. I know how to break down complex problems, prompt AI models effectively, and rigorously test the results to ship real products.</p>
+        <p class="section__lead">AI lets me move from concept to working product in weeks — with real architecture, real tests, and real deployment. I did not follow a traditional path, but I built proof anyway. I know how to decompose complex problems, orchestrate AI effectively, and test rigorously until the product actually works.</p>
       </div>
     </section>
 
@@ -63,17 +64,27 @@
         <p class="section-label" id="toolbelt-label">Toolbelt</p>
         <h2 class="section__title">The workflow I orchestrate.</h2>
         <p class="section__lead" style="margin-top: -1rem; margin-bottom: 2rem;">AI-assisted development for speed and iteration, proven technologies for stability.</p>
+        <p class="toolbelt-heading">What I deliver</p>
+        <ul class="capability-list" role="list">
+          <li class="capability">Web Applications</li>
+          <li class="capability">Desktop Software</li>
+          <li class="capability">Browser Extensions</li>
+          <li class="capability">E-commerce Systems</li>
+          <li class="capability">Bilingual Websites</li>
+          <li class="capability">Industrial Monitoring</li>
+        </ul>
+        <p class="toolbelt-heading">Tools I orchestrate</p>
         <ul class="toolbelt-grid" role="list">
-          <li class="tool"><span class="tool__name">Claude Code</span><span class="tool__sub">core tool</span></li>
-          <li class="tool"><span class="tool__name">Cursor</span><span class="tool__sub">ide</span></li>
-          <li class="tool"><span class="tool__name">Codex</span><span class="tool__sub">coding agent</span></li>
-          <li class="tool"><span class="tool__name">Google Antigravity</span><span class="tool__sub">ide</span></li>
-          <li class="tool"><span class="tool__name">Python + PyQt6</span><span class="tool__sub">desktop</span></li>
-          <li class="tool"><span class="tool__name">Next.js + Tailwind</span><span class="tool__sub">web</span></li>
-          <li class="tool"><span class="tool__name">Chrome Extensions</span><span class="tool__sub">Manifest V3</span></li>
-          <li class="tool"><span class="tool__name">Cloudflare R2</span><span class="tool__sub">assets</span></li>
-          <li class="tool"><span class="tool__name">Web3Forms</span><span class="tool__sub">email</span></li>
-          <li class="tool"><span class="tool__name">Netlify · GitHub Pages</span><span class="tool__sub">deployment</span></li>
+          <li class="tool"><span class="tool__name">Claude Code</span><span class="tool__sub">orchestration engine</span></li>
+          <li class="tool"><span class="tool__name">Cursor</span><span class="tool__sub">ai-powered ide</span></li>
+          <li class="tool"><span class="tool__name">Codex</span><span class="tool__sub">autonomous agent</span></li>
+          <li class="tool"><span class="tool__name">Google Antigravity</span><span class="tool__sub">ai-powered ide</span></li>
+          <li class="tool"><span class="tool__name">Python + PyQt6</span><span class="tool__sub">desktop applications</span></li>
+          <li class="tool"><span class="tool__name">Next.js + Tailwind</span><span class="tool__sub">web applications</span></li>
+          <li class="tool"><span class="tool__name">Chrome Extensions</span><span class="tool__sub">browser tools · mv3</span></li>
+          <li class="tool"><span class="tool__name">Cloudflare R2</span><span class="tool__sub">asset delivery</span></li>
+          <li class="tool"><span class="tool__name">Web3Forms</span><span class="tool__sub">contact & orders</span></li>
+          <li class="tool"><span class="tool__name">Netlify · GitHub Pages</span><span class="tool__sub">hosting & deployment</span></li>
         </ul>
         <p class="note">My workflow is AI-assisted rather than traditional hand-coding. I focus on system architecture, problem decomposition, testing, and orchestration to turn ideas into reliable working software.</p>
       </div>
@@ -83,7 +94,7 @@
     <section class="section section--projects" id="projects" aria-labelledby="projects-label">
       <div class="container container--narrow">
         <p class="section-label" id="projects-label">Projects</p>
-        <h2 class="section__title">Four shipped. Four stories.</h2>
+        <h2 class="section__title">Four built. Four stories.</h2>
       </div>
 
       <!-- Project 1: Extension -->
@@ -270,9 +281,9 @@
           <p class="taught"><span class="taught__label">The Orchestration Challenge</span> Managing a complex, multi-session state where the AI must respect safety contracts without hallucinations. It required rigorous prompting and the discipline to define an offline testing layer so the AI could iterate without touching the live PLC.</p>
 
           <div class="status status--callout">
-            <p class="status__heading"><span class="status__dot status__dot--paused status__dot--opus"></span> Currently paused near the finish line.</p>
-            <p class="status__subtitle">paused — evaluating next-gen models for safety-critical UI</p>
-            <p>The remaining work involves safety-critical UI integration. I am deliberately pausing to evaluate next-generation models before executing complex, high-stakes visual logic.</p>
+            <p class="status__heading"><span class="status__dot status__dot--paused status__dot--opus"></span> Phase 4 of 5 complete.</p>
+            <p class="status__subtitle">final phase — safety-critical ui integration</p>
+            <p>The remaining phase involves safety-critical operator UI. Deliberately held for next-gen model evaluation before production deployment — the responsible call for a system where a UI error could affect physical equipment.</p>
           </div>
         </div>
       </article>
@@ -284,7 +295,7 @@
         <p class="section-label" id="how-label">How I work</p>
         <h2 class="section__title">The orchestration is the skill.</h2>
         <p class="section__lead">I describe outcomes in plain English. I let AI translate intent into working code, then I review, test, and iterate. The core skill is orchestration: knowing what to ask, how to read a model's output critically, when to switch tools, and when a problem requires a different approach.</p>
-        <p class="section__lead">I don't just accept generated code. After verifying functionality manually, I rigorously prompt the AI to write comprehensive unit tests that validate backend logic and edge cases—not just syntax. Nova Control alone has 496 passing tests. The result is robust, tested software, not fragile AI slop.</p>
+        <p class="section__lead">I don't just accept generated code. After verifying functionality manually, I rigorously prompt the AI to write comprehensive unit tests that validate backend logic and edge cases — not just syntax. Nova Control alone has 496 passing tests.</p>
         <p class="section__lead">My projects use real engineering practice: <strong>3-branch deployments</strong> (alpha&nbsp;→&nbsp;beta&nbsp;→&nbsp;main), <strong>modular architecture</strong> with clear dependency boundaries, and <code>.md</code> mapping files that act as agent-handoff documents — so any new session picks up where the last one stopped without losing context.</p>
         <p class="section__lead">I take ownership of the entire lifecycle — from architectural planning to deployment and bug fixing. The end result isn't just generated code; it's robust software with clean architecture, stable APIs, and passing test suites that solves actual business needs.</p>
       </div>
@@ -295,7 +306,7 @@
       <div class="container container--narrow">
         <p class="section-label" id="contact-label">Contact</p>
         <h2 class="section__title">Let's talk.</h2>
-        <p class="section__lead">Phone, email, or LinkedIn — whichever's easiest. Open to AI Orchestrator / no-code developer / AI integration roles.</p>
+        <p class="section__lead">Phone, email, or LinkedIn — whichever's easiest. Open to roles where fast, AI-augmented software delivery creates business value — from rapid prototyping and MVP development to AI integration and product engineering.</p>
         <ul class="contact-list" role="list">
           <li>
             <a class="contact-card" href="tel:+359878235718" aria-label="Call +359 87 823 5718">

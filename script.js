@@ -141,6 +141,10 @@
     });
   });
 
+  /* ---- Download resume (print to PDF) ---- */
+  const resumeBtn = document.getElementById('download-resume');
+  if (resumeBtn) resumeBtn.addEventListener('click', () => window.print());
+
   /* ---- Set current year in footer (if a placeholder exists) ---- */
   const yearEl = document.querySelector('[data-year]');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

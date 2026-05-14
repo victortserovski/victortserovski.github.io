@@ -327,6 +327,38 @@ strong { font-weight: 600; }
   color: var(--text-dim);
 }
 
+.toolbelt-heading {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.toolbelt-heading:first-of-type { margin-top: 0; }
+
+.capability-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+}
+.capability {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  padding: 0.4rem 0.875rem;
+  border-radius: var(--radius-sm);
+}
+
 .note {
   font-size: 0.9375rem;
   color: var(--text-muted);
@@ -851,4 +883,52 @@ code {
   .toolbelt-grid { grid-template-columns: 1fr; }
   .container { padding: 0 1rem; }
   .hero__cta .btn { padding: 0.75rem 1rem; }
+}
+
+/* =========================================================================
+   PRINT STYLESHEET (Download Resume)
+   ========================================================================= */
+@media print {
+  :root {
+    --bg: #fff;
+    --bg-elev: #fff;
+    --bg-card: #f7f7f7;
+    --bg-card-hover: #f7f7f7;
+    --border: #ddd;
+    --border-soft: #eee;
+    --text: #111;
+    --text-muted: #333;
+    --text-dim: #555;
+    --accent: #1d4ed8;
+    --accent-soft: rgba(29, 78, 216, 0.06);
+    --accent-border: rgba(29, 78, 216, 0.2);
+  }
+
+  body { font-size: 10.5pt; }
+
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .hero__scroll,
+  .hero__cta,
+  .project__image,
+  .project__fx,
+  .confetti-particle,
+  .skip-link,
+  .status__dot::before { display: none !important; }
+
+  .reveal { opacity: 1 !important; transform: none !important; }
+
+  .hero { min-height: auto; padding: 2rem 0 1rem; background: #fff; }
+  .section { padding: 1.5rem 0; }
+  .section--about, .section--how { background: none; }
+  .project { padding: 1.5rem 0; }
+  .project--flagship { background: none; }
+  .status--callout { background: var(--accent-soft); }
+  .footer { background: none; }
+
+  .project { page-break-inside: avoid; }
+  h2, h3 { page-break-after: avoid; }
 }
