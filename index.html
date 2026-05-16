@@ -40,7 +40,7 @@
           <div class="hero__cta">
             <a class="btn btn--primary" href="#projects">See projects</a>
             <a class="btn btn--ghost" href="#contact">Get in touch</a>
-            <button class="btn btn--ghost" type="button" data-action="print" aria-label="Save this page as a PDF resume">Download resume</button>
+            <button class="btn btn--ghost" type="button" data-action="print" aria-label="Save this page as a PDF resume">Save as PDF</button>
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@
       <div class="container container--narrow">
         <p class="section-label" id="about-label">About</p>
         <p class="section__lead">I work at <strong>NielsenIQ</strong> as a <strong>Data Deployment Expert</strong>. I have not had a formal developer title, but I have spent the last <strong>18 months</strong> building and shipping real software products by orchestrating AI tools — from a polished Next.js e-commerce site to a Python desktop app talking to industrial hardware.</p>
-        <p class="section__lead">AI lets me move from concept to working product in weeks — with real architecture, real tests, and real deployment. I did not follow a traditional path, but I built proof anyway. I know how to decompose complex problems, orchestrate AI effectively, and test rigorously until the product actually works.</p>
+        <p class="section__lead">AI lets me move from concept to working product in weeks — with real architecture, real tests, and real deployment. I did not follow a traditional path, but I built proof anyway. I know how to decompose complex problems, direct AI tools effectively, and test rigorously until the product actually works.</p>
       </div>
     </section>
 
@@ -62,7 +62,7 @@
     <section class="section section--toolbelt" id="toolbelt" aria-labelledby="toolbelt-label">
       <div class="container container--narrow">
         <p class="section-label" id="toolbelt-label">Toolbelt</p>
-        <h2 class="section__title">The workflow I orchestrate.</h2>
+        <h2 class="section__title">What I work with.</h2>
         <p class="section__lead" style="margin-top: -1rem; margin-bottom: 2rem;">AI-assisted development for speed and iteration, proven technologies for stability.</p>
         <p class="toolbelt-heading">What I deliver</p>
         <ul class="capability-list" role="list">
@@ -73,7 +73,7 @@
           <li class="capability">Bilingual Websites</li>
           <li class="capability">Industrial Monitoring</li>
         </ul>
-        <p class="toolbelt-heading">Tools I orchestrate</p>
+        <p class="toolbelt-heading">Tools I use</p>
         <ul class="toolbelt-grid" role="list">
           <li class="tool"><span class="tool__name">Claude Code</span><span class="tool__sub">orchestration engine</span></li>
           <li class="tool"><span class="tool__name">Cursor</span><span class="tool__sub">ai-powered ide</span></li>
@@ -86,7 +86,7 @@
           <li class="tool"><span class="tool__name">Web3Forms</span><span class="tool__sub">contact & orders</span></li>
           <li class="tool"><span class="tool__name">Netlify · GitHub Pages</span><span class="tool__sub">hosting & deployment</span></li>
         </ul>
-        <p class="note">My workflow is AI-assisted rather than traditional hand-coding. I focus on system architecture, problem decomposition, testing, and orchestration to turn ideas into reliable working software.</p>
+        <p class="note">My workflow is AI-assisted rather than traditional hand-coding. I focus on system architecture, problem decomposition, testing, and focused iteration to turn ideas into reliable working software.</p>
       </div>
     </section>
 
@@ -127,7 +127,7 @@
             <p>For products with available EANs, it cross-checks prices through a backend system that builds shared price history across sites. When EAN data is missing—a common limitation in Bulgarian online stores—it continues tracking the product independently. The system also includes protections to secure the data from scraping.</p>
 
             <h4>How I built it</h4>
-            <p>Built using <strong>Claude Code</strong>. I didn't write the Chrome Extension APIs myself. Instead, I focused on defining the exact logic the AI needed to follow: how to extract prices, when to flag a fake discount, and how to store the history. My main challenge was testing the extension repeatedly on strict sites like Ozone.bg and adjusting my prompts until the AI generated a stable background architecture.</p>
+            <p>Built using <strong>Claude Code</strong>. I owned the product logic, testing strategy, and integration constraints — defining exactly how to extract prices across three different site structures, when to flag a fake discount, and how to store history reliably. My main challenge was validating the extension against strict anti-bot protections on sites like Ozone.bg, iterating until the background architecture handled multi-day data collection without breaking.</p>
           </div>
 
           <h4>Key Features</h4>
@@ -177,7 +177,7 @@
             <p>A 13-page bilingual website with directory-based i18n (<code>/bg/</code> and <code>/en/</code>), a custom canvas particles animation themed to the industry (gravel / sand / cement), a 79-photo gallery with category accordions and lightbox, a fully styled EU-funded project page with 16 mandatory PDF documents, and a Web3Forms API integration with anti-spam protection.</p>
 
             <h4>How I built it</h4>
-            <p>Architected with <strong>Claude Code</strong> and <strong>Codex</strong>. I instructed Claude to build the site using only basic HTML, CSS, and JavaScript so it would be fast and easy to host. The hardest part was getting the AI to perfectly translate my visual ideas (like the particle animation) into working code, which took dozens of iterations and visual checks.</p>
+            <p>Architected with <strong>Claude Code</strong> and <strong>Codex</strong>. I chose plain HTML, CSS, and JavaScript deliberately — no frameworks, fast hosting, easy long-term maintenance. The hardest part was translating visual concepts (like the industry-themed particle animation) into precise technical requirements, then iterating through dozens of rounds of visual checks until the result matched the vision.</p>
           </div>
 
           <ul class="proof" role="list">
@@ -224,7 +224,7 @@
             <p>A full Next.js 15 e-commerce site with <strong>81 static pages</strong>: a 3-step customization wizard (event → theme → products → personalization → preview), 6 event types × 10 themes = 60 combo pages, an interactive budget calculator, a cart that persists in localStorage <em>and</em> can be shared via URL (base64-encoded), automatic volume discounts (5 / 10 / 15% tiers based on quantity), and an "express order" option that prefixes the order email with ⚡ СПЕШНА.</p>
 
             <h4>How I built it</h4>
-            <p>Built using <strong>Claude Code</strong> and <strong>Codex</strong>. This project required extremely complex business logic—60 different product combinations, automatic volume discounts, and a multi-step customization wizard. My job was breaking down these rules into plain English so the AI could build a Next.js app that didn't break. I also prioritized SEO, commanding the AI to implement technical schemas I researched online.</p>
+            <p>Built using <strong>Claude Code</strong> and <strong>Codex</strong>. I broke down the complex business logic — 60 product combinations, automatic volume discounts, a multi-step customization wizard — into precise rules, then validated every edge case across the full matrix. I also researched and specified the SEO schemas (JSON-LD, FAQPage, breadcrumbs) to make sure the site ranked well from day one.</p>
           </div>
 
           <ul class="proof" role="list">
@@ -266,7 +266,32 @@
             <p>A Windows desktop application (<code>.exe</code>) that interfaces with Omron CJ1M-CPU11 / CJ2M-CPU32 PLCs over <strong>FINS / UDP, FINS / Serial, and Host Link</strong> — strictly READ-ONLY (the driver base class doesn't even <em>expose</em> write methods). 8 tabs covering Settings, Reports, Invoices, Production Management, Clients, SCADA Operator Screen, Requests, and Dispatcher (default). Recipe immutability for anti-fraud, hardware-bound licensing with offline grace, auto-database backups (180 retained), 3-tier polling (200&nbsp;ms / 500&nbsp;ms / 2000&nbsp;ms) with staleness detection, full Bulgarian UI with high contrast and large fonts for elderly operators.</p>
 
             <h4>How I built it</h4>
-            <p>Built with <strong>Cursor</strong> and <strong>Claude Opus</strong>. Current AI context windows aren't large enough to build a 20,000+ line application in one pass. To make this work, my role was acting as the system architect. I wrote detailed <code>.md</code> mapping files that broke the app down into 14 separate modules. By feeding the AI exactly what it needed to know about the dependencies, and enforcing rigorous offline testing, I guided it to safely build a complex Windows app module by module without me writing the Python code.</p>
+            <p>Built with <strong>Cursor</strong> and <strong>Claude Opus</strong>. A 20,000+ line application can't be built in one AI session — so I acted as the system architect. I wrote detailed <code>.md</code> mapping files defining 14 modules, their dependencies, and their safety constraints. Each module was built, tested offline against mock PLC data, and integrated incrementally — the same discipline you'd expect from a team of engineers, compressed into one person directing AI.</p>
+          </div>
+
+          <div class="safety-flow" aria-label="Safety architecture diagram showing read-only data flow">
+            <p class="safety-flow__title">Safety Architecture — Read-Only Data Flow</p>
+            <div class="safety-flow__steps">
+              <div class="safety-flow__step">
+                <span class="safety-flow__label">Omron PLC</span>
+                <span class="safety-flow__sub">CJ1M / CJ2M hardware</span>
+              </div>
+              <span class="safety-flow__arrow" aria-hidden="true">→ READ</span>
+              <div class="safety-flow__step safety-flow__step--highlight">
+                <span class="safety-flow__label">FINS Driver</span>
+                <span class="safety-flow__sub">read-only · no write methods exist</span>
+              </div>
+              <span class="safety-flow__arrow" aria-hidden="true">→</span>
+              <div class="safety-flow__step">
+                <span class="safety-flow__label">Polling Scheduler</span>
+                <span class="safety-flow__sub">200ms · 500ms · 2s tiers</span>
+              </div>
+              <span class="safety-flow__arrow" aria-hidden="true">→</span>
+              <div class="safety-flow__step">
+                <span class="safety-flow__label">Operator UI</span>
+                <span class="safety-flow__sub">8 tabs · Bulgarian · high contrast</span>
+              </div>
+            </div>
           </div>
 
           <ul class="proof proof--flagship" role="list">
@@ -281,9 +306,9 @@
           <p class="taught"><span class="taught__label">The Orchestration Challenge</span> Managing a complex, multi-session state where the AI must respect safety contracts without hallucinations. It required rigorous prompting and the discipline to define an offline testing layer so the AI could iterate without touching the live PLC.</p>
 
           <div class="status status--callout">
-            <p class="status__heading"><span class="status__dot status__dot--paused status__dot--opus"></span> Phase 4 of 5 complete.</p>
-            <p class="status__subtitle">final phase — safety-critical ui integration</p>
-            <p>The remaining phase involves safety-critical operator UI. Deliberately held for next-gen model evaluation before production deployment — the responsible call for a system where a UI error could affect physical equipment.</p>
+            <p class="status__heading"><span class="status__dot status__dot--paused status__dot--opus"></span> Phase 4 of 5 in progress.</p>
+            <p class="status__subtitle">14 modules built and tested · safety-critical ui remaining</p>
+            <p>Core backend, PLC communication, business logic, and most UI tabs are complete. The remaining work involves safety-critical operator screens. Deliberately held for next-gen model evaluation before production deployment — the responsible call for a system where a UI error could affect physical equipment.</p>
           </div>
         </div>
       </article>
@@ -332,7 +357,7 @@
           <li>
             <button class="contact-card" type="button" data-action="print" aria-label="Save this page as a PDF resume">
               <span class="contact-card__label">Resume</span>
-              <span class="contact-card__value">Download as PDF</span>
+              <span class="contact-card__value">Save as PDF</span>
               <span class="contact-card__hint">Click to save ↓</span>
             </button>
           </li>
