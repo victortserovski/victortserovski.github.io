@@ -31,50 +31,19 @@
     revealTargets.forEach((el) => io.observe(el));
   }
 
-  /* ---- Count-up animation ---- */
-  const countUpTargets = document.querySelectorAll('[data-countup]');
-
-  function animateCountUp(el, target) {
-    const duration = 2500;
-    const start = performance.now();
-
-    function step(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      // easeOutCubic
-      const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(eased * target);
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      } else {
-        el.textContent = target;
-      }
-    }
-
-    requestAnimationFrame(step);
-  }
-
-  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-    // Numbers stay as-is (already showing final values)
-  } else {
-    // Set initial display to 0
-    countUpTargets.forEach((el) => { el.textContent = '0'; });
-
-    const countUpObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const el = entry.target;
-            const target = parseInt(el.dataset.countup, 10);
-            animateCountUp(el, target);
-            countUpObserver.unobserve(el);
-          }
-        });
-      },
-      { rootMargin: '0px 0px -15% 0px', threshold: 0.8 }
-    );
-    countUpTargets.forEach((el) => countUpObserver.observe(el));
-  }
+  /* ---- Video play buttons ---- */
+  document.querySelectorAll('.project__play').forEach((btn) => {
+    const video = btn.previousElementSibling;
+    btn.addEventListener('click', () => {
+      btn.classList.add('is-hidden');
+      video.play();
+    });
+    video.addEventListener('pause', () => btn.classList.remove('is-hidden'));
+    video.addEventListener('ended', () => {
+      btn.classList.remove('is-hidden');
+      video.currentTime = 0;
+    });
+  });
 
   /* ---- Email copy confetti ---- */
   function spawnConfetti(originEl) {

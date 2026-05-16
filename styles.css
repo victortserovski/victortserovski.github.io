@@ -395,108 +395,41 @@ strong { font-weight: 600; }
   background: var(--bg-card);
   aspect-ratio: 16 / 9;
 }
-.project__image img { width: 100%; height: 100%; object-fit: cover; }
+.project__image img,
+.project__video { width: 100%; height: 100%; object-fit: cover; }
 
-/* ---- Project hover FX overlays ---- */
-.project__fx {
+/* ---- Video play button overlay ---- */
+.project__play {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
   z-index: 2;
+  transition: opacity 0.3s ease;
 }
-
-/* Fake Discount: price chart line draw */
-.project__fx--extension .fx-line {
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-dasharray: 1200;
-  stroke-dashoffset: 1200;
-  transition: stroke-dashoffset 1.2s ease-out;
+.project__play svg {
+  width: 64px;
+  height: 64px;
 }
-.project__fx--extension .fx-line--green {
-  stroke: #10b981;
+.project__play circle {
+  fill: rgba(0, 0, 0, 0.55);
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-width: 2;
+  transition: fill 0.2s ease;
 }
-.project__fx--extension .fx-line--red {
-  stroke: #ef4444;
+.project__play polygon {
+  fill: rgba(255, 255, 255, 0.95);
 }
-.project__fx--extension .fx-dot {
+.project__play:hover circle {
+  fill: rgba(59, 130, 246, 0.7);
+}
+.project__play.is-hidden {
   opacity: 0;
-  transition: opacity 0.3s ease-out 1s;
-}
-.project__fx--extension .fx-dot--green {
-  fill: #10b981;
-}
-.project__fx--extension .fx-dot--red {
-  fill: #ef4444;
-}
-.project:hover .project__fx--extension .fx-line { stroke-dashoffset: 0; }
-.project:hover .project__fx--extension .fx-dot  { opacity: 1; }
-
-/* SIMA-MA: particle drift */
-.project__fx--sima .fx-particle {
-  fill: #8b7355;
-  opacity: 0;
-  transform-box: fill-box;
-  transform-origin: center;
-  transition: opacity 0.4s ease;
-}
-.project:hover .project__fx--sima .fx-particle {
-  opacity: 0.9;
-  animation: particle-drift 2.5s ease-in-out infinite alternate;
-}
-.project:hover .project__fx--sima .fx-particle:nth-child(2) { animation-delay: 0.4s; }
-.project:hover .project__fx--sima .fx-particle:nth-child(3) { animation-delay: 0.8s; }
-.project:hover .project__fx--sima .fx-particle:nth-child(4) { animation-delay: 0.2s; }
-.project:hover .project__fx--sima .fx-particle:nth-child(5) { animation-delay: 0.6s; }
-.project:hover .project__fx--sima .fx-particle:nth-child(6) { animation-delay: 1.0s; }
-@keyframes particle-drift {
-  0%   { transform: translateY(0) scale(1.5); opacity: 0.9; }
-  100% { transform: translateY(-15px) scale(1.8); opacity: 0.5; }
-}
-
-/* Малки Подаръчета: confetti float */
-.project__fx--malki .fx-confetti {
-  fill: #e88da0;
-  opacity: 0;
-  transform-box: fill-box;
-  transform-origin: center;
-  transition: opacity 0.4s ease;
-}
-.project:hover .project__fx--malki .fx-confetti {
-  opacity: 0.85;
-  animation: confetti-float 2.8s ease-in-out infinite alternate;
-}
-.project:hover .project__fx--malki .fx-confetti:nth-child(2) { animation-delay: 0.35s; }
-.project:hover .project__fx--malki .fx-confetti:nth-child(3) { animation-delay: 0.7s; }
-.project:hover .project__fx--malki .fx-confetti:nth-child(4) { animation-delay: 0.15s; }
-.project:hover .project__fx--malki .fx-confetti:nth-child(5) { animation-delay: 0.5s; }
-.project:hover .project__fx--malki .fx-confetti:nth-child(6) { animation-delay: 0.9s; }
-@keyframes confetti-float {
-  0%   { transform: translateY(0) rotate(0deg) scale(1.3); opacity: 0.85; }
-  100% { transform: translateY(-16px) rotate(25deg) scale(1.5); opacity: 0.45; }
-}
-
-/* Nova Control: SCADA status dot cycling */
-.project__fx--nova .fx-scada {
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-.project:hover .project__fx--nova .fx-scada {
-  opacity: 0.85;
-}
-.project:hover .project__fx--nova .fx-scada:nth-child(1) { animation: scada-cycle-1 2s ease-in-out infinite; }
-.project:hover .project__fx--nova .fx-scada:nth-child(2) { animation: scada-cycle-2 2s ease-in-out infinite 0.3s; }
-.project:hover .project__fx--nova .fx-scada:nth-child(3) { animation: scada-cycle-3 2s ease-in-out infinite 0.6s; }
-@keyframes scada-cycle-1 {
-  0%, 100% { fill: #10b981; } 50% { fill: #f59e0b; }
-}
-@keyframes scada-cycle-2 {
-  0%, 100% { fill: #f59e0b; } 50% { fill: #10b981; }
-}
-@keyframes scada-cycle-3 {
-  0%, 100% { fill: #10b981; } 50% { fill: #f59e0b; }
+  pointer-events: none;
 }
 
 .project__header { margin-bottom: 1.5rem; }
@@ -973,7 +906,6 @@ code {
   .hero__scroll,
   .hero__cta,
   .project__image,
-  .project__fx,
   .confetti-particle,
   .skip-link,
   .status__dot::before { display: none !important; }
