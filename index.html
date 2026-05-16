@@ -112,39 +112,39 @@
             </svg>
           </div>
           <header class="project__header">
-            <h3 class="project__title">Fake Discount BG</h3>
+            <h3 class="project__title">Fake Discount Bulgaria</h3>
             <p class="project__tag">
               <span class="tag">Chrome Extension</span>
               <span class="status" style="display: inline-flex; margin-top: 0; margin-left: 1rem; font-size: 0.875rem;"><span class="status__dot status__dot--live"></span> Live on <a class="status__link" href="https://chromewebstore.google.com/detail/fake-discount-bg/napohmhembobenfaaanfdabjehnjcdci" target="_blank" rel="noopener noreferrer" style="margin-left: 0.25rem;">Chrome Web Store ↗</a></span>
             </p>
-            <p class="project__quote">"Built for the Bulgarian market, where discounts can be misleading. This extension tracks real price history and exposes when a promotion isn’t as good as it looks."</p>
+            <p class="project__quote">"Covers 20 Bulgarian e-commerce sites. Tracks real price history automatically and exposes when a promotion isn’t as good as it looks."</p>
           </header>
 
           <div class="project__body">
             <h4>The problem</h4>
-            <p>I built this extension for the Bulgarian market, where price tracking is especially difficult. Major retailers such as <a href="https://www.emag.bg/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">eMAG</a>, <a href="https://www.ozone.bg/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Ozone</a>, and <a href="https://www.notino.bg/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Notino</a> can change prices before sale periods, which makes discounts appear more significant than they really are. Existing price-tracking tools were not reliable enough for local stores, so I created a solution focused specifically on accurate tracking for Bulgarian shoppers.</p>
+            <p>Bulgarian e-commerce has a fake-discount problem. Retailers raise prices before a "sale" so the markdown looks bigger than it is. This happens across the entire market — from electronics giants like <a href="https://www.emag.bg/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">eMAG</a> and <a href="https://www.ozone.bg/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Ozone</a> to fashion stores like <a href="https://www.aboutyou.bg/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">About You</a> and pharmacies like <a href="https://www.sopharmacy.bg/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Sopharmacy</a>. No existing tool covered enough Bulgarian stores, so I built one that handles all 20 major sites.</p>
 
             <h4>What I built</h4>
-            <p>A Chrome/Edge extension that analyzes every product I visit and shows a real-time verdict directly on the page: <strong>Fake discount, Real deal, Stable price, or Still tracking</strong>—complete with explanation and a visual price history chart.</p>
-            <p>For products with available EANs, it cross-checks prices through a backend system that builds shared price history across sites. When EAN data is missing—a common limitation in Bulgarian online stores—it continues tracking the product independently. The system also includes protections to secure the data from scraping.</p>
+            <p>A Chrome/Edge extension with 20 dedicated per-site content scripts that automatically tracks every product you visit. It shows a real-time verdict directly on the page — <strong>Fake discount, Real deal, Volatile price, Stable price, or Tracking</strong> — with a visual price-history chart and an explanation of why it reached that conclusion.</p>
+            <p>Every observation is also synced to a Supabase cloud database, building a shared price-history dataset across all installs. For products with exposed EAN barcodes, the system can cross-reference the same product across different stores. The extension handles single-page apps (About You, Answear, dm), currency traps (BGN vs EUR), out-of-stock detection, and upsell-rail isolation — each site has its own extraction logic.</p>
 
             <h4>How I built it</h4>
-            <p>Built using <strong>Claude Code</strong>. I owned the product logic, testing strategy, and integration constraints — defining exactly how to extract prices across three different site structures, when to flag a fake discount, and how to store history reliably. My main challenge was validating the extension against strict anti-bot protections on sites like Ozone.bg, iterating until the background architecture handled multi-day data collection without breaking.</p>
+            <p>Built using <strong>Claude Code</strong>. I defined the product architecture, verdict logic, and per-site extraction rules for all 20 stores — each with different HTML structures, some using SPAs, some mixing currencies, some hiding prices behind lazy-load. My main challenge was specifying the constraints clearly enough that the AI could produce 20 separate content scripts that all feed into one unified storage and verdict system, while surviving anti-bot protections and SPA navigation without breaking.</p>
           </div>
 
           <h4>Key Features</h4>
           <ul class="proof" role="list" style="margin-top: 0.625rem;">
-            <li>3 marketplaces</li>
-            <li>EAN / Supabase cross-site check</li>
-            <li>Anti-bot data protection</li>
+            <li>20 Bulgarian e-stores</li>
+            <li>5-tier verdict system</li>
+            <li>Supabase cloud sync</li>
+            <li>EAN cross-site matching</li>
+            <li>SPA navigation handling</li>
             <li>Bilingual BG / EN</li>
-            <li>Keyboard shortcut</li>
             <li>Price-target alerts</li>
             <li>Export / import JSON</li>
-            <li>Persistent filters</li>
           </ul>
 
-          <p class="taught"><span class="taught__label">The Orchestration Challenge</span> Testing and iterating against strict website security rules, and defining clear constraints so the AI could build a robust messaging architecture that handles multi-day data-collection without breaking.</p>
+          <p class="taught"><span class="taught__label">The Orchestration Challenge</span> Defining extraction rules for 20 different site structures — SPAs, currency traps, anti-bot protections, out-of-stock edge cases — and specifying a unified verdict cascade that produces consistent, explainable results across all of them.</p>
         </div>
       </article>
 
