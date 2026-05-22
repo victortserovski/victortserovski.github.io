@@ -262,64 +262,31 @@
 
           <div class="safety-flow" aria-label="Safety architecture diagram showing the recipe-only write handshake">
             <p class="safety-flow__title">Safety Architecture — Recipe-Only Handshake</p>
-            <p class="safety-flow__intro">The PC writes only recipes to the controller. Start, stop, and all physical controls remain with the operator at the touchscreen.</p>
+            <p class="safety-flow__intro">The PC writes only recipe targets. Physical control commands (start, stop, discharge) remain with the operator at the touchscreen.</p>
 
             <div class="safety-flow__sequence">
-              <div class="safety-flow__phase-label">Recipe Delivery</div>
-
               <div class="safety-flow__row">
                 <span class="safety-flow__num">1</span>
                 <span class="safety-flow__dir safety-flow__dir--write">PC → PLC</span>
-                <span class="safety-flow__text">Write recipe targets into bounded register block</span>
-              </div>
-              <div class="safety-flow__row">
-                <span class="safety-flow__num">2</span>
-                <span class="safety-flow__dir safety-flow__dir--write">PC → PLC</span>
-                <span class="safety-flow__text">Set recipe-ready handshake signal</span>
-              </div>
-              <div class="safety-flow__row">
-                <span class="safety-flow__num">3</span>
-                <span class="safety-flow__dir safety-flow__dir--read">PLC → PC</span>
-                <span class="safety-flow__text">Controller validates and acknowledges receipt</span>
-              </div>
-              <div class="safety-flow__row">
-                <span class="safety-flow__num">4</span>
-                <span class="safety-flow__dir safety-flow__dir--read">PLC → PC</span>
-                <span class="safety-flow__text">Readback verification — values match within tolerance</span>
-              </div>
-              <div class="safety-flow__row">
-                <span class="safety-flow__num">5</span>
-                <span class="safety-flow__dir safety-flow__dir--write">PC → PLC</span>
-                <span class="safety-flow__text">Clear handshake — recipe delivered successfully</span>
-              </div>
-
-              <div class="safety-flow__divider">
-                <span class="safety-flow__divider-text">Operator Action on Touchscreen</span>
+                <span class="safety-flow__text"><strong>Recipe Push</strong> — Writes recipe targets through a strict range-limiting Safety Gate</span>
               </div>
 
               <div class="safety-flow__row safety-flow__row--operator">
-                <span class="safety-flow__num safety-flow__num--operator">6</span>
+                <span class="safety-flow__num safety-flow__num--operator">2</span>
                 <span class="safety-flow__dir safety-flow__dir--operator">Operator</span>
-                <span class="safety-flow__text">Reviews recipe on touchscreen · adjusts water for humidity · presses START</span>
+                <span class="safety-flow__text"><strong>Physical Verification</strong> — Operator reviews targets on touchscreen and presses physical START button</span>
               </div>
 
-              <div class="safety-flow__phase-label">Production Monitoring</div>
-
               <div class="safety-flow__row">
-                <span class="safety-flow__num">7</span>
+                <span class="safety-flow__num">3</span>
                 <span class="safety-flow__dir safety-flow__dir--read">PLC → PC</span>
-                <span class="safety-flow__text">Poll batch status and controller mode (auto / manual / emergency)</span>
-              </div>
-              <div class="safety-flow__row">
-                <span class="safety-flow__num">8</span>
-                <span class="safety-flow__dir safety-flow__dir--read">PLC → PC</span>
-                <span class="safety-flow__text">Batch complete — record results, deduct inventory, generate certificate</span>
+                <span class="safety-flow__text"><strong>Status Poll</strong> — PC reads back progress, logs actual weights, and generates PDF concrete passports</span>
               </div>
             </div>
 
             <div class="safety-flow__gate">
               <span class="safety-flow__gate-label">Safety Gate</span>
-              <span class="safety-flow__gate-text">Every write is checked against the allowed recipe range. Out-of-range writes are blocked and logged. The PC never sends start, stop, discharge, skip, or reset commands.</span>
+              <span class="safety-flow__gate-text">Every write is checked against allowed limits. Out-of-range values are blocked. The software cannot physically trigger start, stop, discharge, or skip commands.</span>
             </div>
           </div>
 
@@ -347,11 +314,32 @@
     <section class="section section--how" id="how" aria-labelledby="how-label">
       <div class="container container--narrow">
         <p class="section-label" id="how-label">How I work</p>
-        <h2 class="section__title">The orchestration is the skill.</h2>
-        <p class="section__lead">Describing outcomes in plain English and directing AI tools to translate intent into working code is only the first step. The true skill lies in orchestration: critical evaluation of model outputs, robust architectural planning, knowing when to pivot, and verifying correctness at every stage.</p>
-        <p class="section__lead">Quality assurance is treated as a priority. Code is verified through structured manual tests, followed by directing AI engines to write comprehensive unit and integration test suites that validate backend business logic—not just syntax. Nova Control alone contains 1,637 passing tests across 32 sessions.</p>
-        <p class="section__lead">Projects are built using solid engineering practices: <strong>3-branch deployments</strong> (alpha&nbsp;→&nbsp;beta&nbsp;→&nbsp;main), <strong>modular architecture</strong> with clear dependency boundaries, and <code>.md</code> mapping files that act as agent-handoff documents—allowing subsequent sessions to resume progress without losing context.</p>
-        <p class="section__lead">Taking responsibility for the entire lifecycle—from architectural planning to deployment and bug fixing—ensures that the final deliverable is robust, maintainable, and solves actual business needs.</p>
+        <h2 class="section__title">Orchestration is the skill.</h2>
+        <p class="section__lead">Modern development is shifting from manual coding to system orchestration. Translating intent into production-ready software requires strict architectural boundaries and rigorous verification.</p>
+        
+        <ul style="list-style: none; padding: 0; margin: 1.75rem 0 0 0; display: flex; flex-direction: column; gap: 1.25rem;">
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <span style="color: var(--accent); font-weight: bold; font-family: var(--mono); font-size: 0.875rem; padding-top: 0.1rem;">[1]</span>
+            <div>
+              <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.125rem; color: var(--text);">Architecture & Boundaries</strong>
+              <span style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; display: block;">Decomposing complex requirements into clear, isolated components with strong interface boundaries before directing code generation.</span>
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <span style="color: var(--accent); font-weight: bold; font-family: var(--mono); font-size: 0.875rem; padding-top: 0.1rem;">[2]</span>
+            <div>
+              <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.125rem; color: var(--text);">Automated Verification</strong>
+              <span style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; display: block;">Securing backend and UI stability with comprehensive test suites—such as the 1,637 passing tests for Nova Control—to ensure absolute safety in production.</span>
+            </div>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <span style="color: var(--accent); font-weight: bold; font-family: var(--mono); font-size: 0.875rem; padding-top: 0.1rem;">[3]</span>
+            <div>
+              <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.125rem; color: var(--text);">Lifecycle Ownership</strong>
+              <span style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; display: block;">Taking complete responsibility for the entire lifecycle—from deployment planning to long-term maintenance and focused iteration.</span>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 

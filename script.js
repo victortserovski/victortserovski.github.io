@@ -38,6 +38,11 @@
       btn.classList.add('is-hidden');
       video.play();
     });
+    video.addEventListener('click', () => {
+      if (!video.paused) {
+        video.pause();
+      }
+    });
     video.addEventListener('pause', () => btn.classList.remove('is-hidden'));
     video.addEventListener('ended', () => {
       btn.classList.remove('is-hidden');
