@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0a0a0a">
 
   <title>Victor Tserovski — AI Orchestrator</title>
-  <meta name="description" content="I build working software by orchestrating AI. Two websites, one Chrome extension, and an industrial desktop app with 496 passing tests. Built with Anthropic Claude Code, OpenAI Codex, and Google Antigravity — with AI-assisted development, while taking responsibility for architecture, testing, and delivery.">
+  <meta name="description" content="I build working software by orchestrating AI. Two websites, one Chrome extension, and an industrial desktop app with 1,637 passing tests. Built with Anthropic Claude Code, OpenAI Codex, and Google Antigravity — with AI-assisted development, while taking responsibility for architecture, testing, and delivery.">
 
   <meta property="og:title" content="Victor Tserovski — AI Orchestrator">
   <meta property="og:description" content="I build working software by orchestrating AI.">
@@ -38,7 +38,7 @@
         <div class="hero__content">
           <p class="hero__name">Victor Tserovski</p>
           <h1 class="hero__headline">I build working software by <span class="accent">orchestrating AI</span>.</h1>
-          <p class="hero__sub">Two websites, one Chrome extension, and an industrial desktop app with <strong>496 passing tests</strong>. Built with Claude Code, Cursor, Codex, and Google Antigravity&nbsp;— with AI-assisted development, while taking responsibility for architecture, testing, and delivery.</p>
+          <p class="hero__sub">Two websites, one Chrome extension, and an industrial desktop app with <strong>1,637 passing tests</strong>. Built with Claude Code, Cursor, Codex, and Google Antigravity&nbsp;— with AI-assisted development, while taking responsibility for architecture, testing, and delivery.</p>
           <div class="hero__cta">
             <a class="btn btn--primary" href="#projects">See projects</a>
             <a class="btn btn--ghost" href="#contact">Get in touch</a>
@@ -235,70 +235,111 @@
         </div>
       </article>
 
-      <!-- Project 4: Nova Control (Magnum Opus) -->
+      <!-- Project 4: Nova Control (Flagship) -->
       <article class="project project--flagship" id="project-novacontrol">
         <div class="container container--narrow">
           <div class="project__image">
-            <img src="assets/project-novacontrol.svg" alt="Nova Control — Industrial Desktop App" loading="lazy">
+            <img src="assets/project-novacontrol.svg" alt="Nova Control — Concrete Plant Dispatcher" loading="lazy">
           </div>
           <header class="project__header">
             <p class="project__flagship-label">Flagship Project</p>
             <h3 class="project__title">Nova Control: Concrete Plant Dispatcher</h3>
-            <p class="project__tag"><span class="tag">Python Desktop App · 14 modules · 496 passing tests</span></p>
-            <p class="project__quote">"The most ambitious system I've built — a Windows desktop app reading live data from a real industrial PLC."</p>
+            <p class="project__tag"><span class="tag">Python Desktop App · 7 tabs · 1,637 tests · v2.0.0</span></p>
+            <p class="project__quote">"A full dispatcher system for a real concrete batching plant — managing orders, recipes, trucks, and live production, with a verified safety architecture that ensures only recipes ever reach the industrial controller."</p>
           </header>
 
           <div class="project__body">
             <h4>The problem</h4>
-            <p>Bulgarian concrete plants run on Soviet-era dispatcher software with brittle UIs and no modern features. Operators are often elderly. They need a modern, monitor-only dispatcher that reads the existing Omron PLCs without ever risking a write to the live process — a single bad write to a concrete batching PLC could damage equipment or hurt people.</p>
+            <p>Concrete batching plants need a dispatcher — someone who takes customer orders, assigns mixer trucks, sends the correct recipe to the plant's industrial controller, and tracks every kilogram of material used. Most Bulgarian plants either use outdated DOS-era software or manage everything on paper. The real challenge: this software talks directly to an industrial controller (PLC) that operates heavy machinery — scales, valves, conveyors, a mixer. The dispatcher needs to send recipes to the controller, but must never be able to start, stop, or override the physical production process. That responsibility belongs to the operator standing at the machine.</p>
 
             <h4>What I built</h4>
-            <p>A Windows desktop application (<code>.exe</code>) that interfaces with Omron CJ1M-CPU11 / CJ2M-CPU32 PLCs over <strong>FINS / UDP, FINS / Serial, and Host Link</strong> — strictly READ-ONLY (the driver base class doesn't even <em>expose</em> write methods). 8 tabs covering Settings, Reports, Invoices, Production Management, Clients, SCADA Operator Screen, Requests, and Dispatcher (default). Recipe immutability for anti-fraud, hardware-bound licensing with offline grace, auto-database backups (180 retained), 3-tier polling (200&nbsp;ms / 500&nbsp;ms / 2000&nbsp;ms) with staleness detection, full Bulgarian UI with high contrast and large fonts for elderly operators.</p>
+            <p>A Windows desktop application that connects to a <strong>Delta TP70P-32TP1R</strong> industrial controller over three communication channels — Ethernet, serial cable, or legacy RS-232 for older Omron plants — all in one application. The software handles the entire dispatcher workflow across <strong>7 specialized tabs</strong>: plant configuration, recipe and inventory management, client and site tracking, incoming orders, expedition dispatch with live controller status, a real-time plant visualization screen, and comprehensive reporting with printable concrete quality certificates.</p>
+            <p>The safety architecture is the core achievement: the software can <strong>only write recipe data</strong> to the controller — never start, stop, or discharge commands. Every outgoing write passes through a safety gate that verifies it falls within the allowed recipe range. Any write outside that range is blocked, logged, and refused entirely. After the recipe arrives, the operator reviews it on the controller's touchscreen, adjusts water based on material humidity, and presses START physically — keeping a human in control of the actual production at all times.</p>
+            <p>Beyond the core dispatch workflow, the system includes a <strong>configurable Plant Builder</strong> (describe any plant layout — how many cement silos, aggregate bunkers, water tanks, additive dispensers, and mixers, along with their controller addresses), <strong>immutable recipe versioning</strong> (editing a recipe creates a new version while archiving the old one — critical for quality assurance and anti-fraud in construction), <strong>automatic concrete passport PDFs</strong> generated per truck with full batch details, <strong>material substitution tracking</strong> when stock runs out, <strong>hardware-bound licensing</strong> with remote management, and a <strong>dispatcher fuzzer</strong> that runs 1,000 randomized operator actions to find interaction bugs no manual testing could catch.</p>
 
             <h4>How I built it</h4>
-            <p>Built with <strong>Cursor</strong> and <strong>Claude Opus</strong>. A 20,000+ line application can't be built in one AI session — so I acted as the system architect. I wrote detailed <code>.md</code> mapping files defining 14 modules, their dependencies, and their safety constraints. Each module was built, tested offline against mock PLC data, and integrated incrementally — the same discipline you'd expect from a team of engineers, compressed into one person directing AI.</p>
+            <p>This project demonstrates what AI orchestration looks like at serious scale. I wrote a <strong>36,000+ word master specification</strong> — a complete document covering every business rule, safety constraint, controller protocol detail, and interface requirement. I conducted in-depth interviews with a concrete plant expert and documented <strong>19 confirmed business decisions</strong> that govern how recipes, inventory, substitutions, and expeditions actually work in the field. I created a separate <strong>AI orientation document</strong> with 24 non-negotiable rules that every AI session must follow — from "the PC writes only recipes" to "never mock the database in tests" to "every form layout must use the width-expanding helper."</p>
+            <p>The application was verified across <strong>32 dedicated testing sessions</strong>, each targeting a specific class of failure: a 1,000-iteration random-action fuzzer, cross-tab communication regression, end-to-end button click-throughs with real dialog windows, visual rendering checks, combinatorial state coverage across all 7 tabs, boundary input testing (negative numbers, impossible values, injection attacks), and form layout validation. The result: <strong>1,637 behavioural tests</strong> that confirm the system works correctly under normal use, extreme inputs, and randomized chaos.</p>
           </div>
 
-          <div class="safety-flow" aria-label="Safety architecture diagram showing read-only data flow">
-            <p class="safety-flow__title">Safety Architecture — Read-Only Data Flow</p>
-            <div class="safety-flow__steps">
-              <div class="safety-flow__step">
-                <span class="safety-flow__label">Omron PLC</span>
-                <span class="safety-flow__sub">CJ1M / CJ2M hardware</span>
+          <div class="safety-flow" aria-label="Safety architecture diagram showing the recipe-only write handshake">
+            <p class="safety-flow__title">Safety Architecture — Recipe-Only Handshake</p>
+            <p class="safety-flow__intro">The PC writes only recipes to the controller. Start, stop, and all physical controls remain with the operator at the touchscreen.</p>
+
+            <div class="safety-flow__sequence">
+              <div class="safety-flow__phase-label">Recipe Delivery</div>
+
+              <div class="safety-flow__row">
+                <span class="safety-flow__num">1</span>
+                <span class="safety-flow__dir safety-flow__dir--write">PC → PLC</span>
+                <span class="safety-flow__text">Write recipe targets into bounded register block</span>
               </div>
-              <span class="safety-flow__arrow" aria-hidden="true">→ READ</span>
-              <div class="safety-flow__step safety-flow__step--highlight">
-                <span class="safety-flow__label">FINS Driver</span>
-                <span class="safety-flow__sub">read-only · no write methods exist</span>
+              <div class="safety-flow__row">
+                <span class="safety-flow__num">2</span>
+                <span class="safety-flow__dir safety-flow__dir--write">PC → PLC</span>
+                <span class="safety-flow__text">Set recipe-ready handshake signal</span>
               </div>
-              <span class="safety-flow__arrow" aria-hidden="true">→</span>
-              <div class="safety-flow__step">
-                <span class="safety-flow__label">Polling Scheduler</span>
-                <span class="safety-flow__sub">200ms · 500ms · 2s tiers</span>
+              <div class="safety-flow__row">
+                <span class="safety-flow__num">3</span>
+                <span class="safety-flow__dir safety-flow__dir--read">PLC → PC</span>
+                <span class="safety-flow__text">Controller validates and acknowledges receipt</span>
               </div>
-              <span class="safety-flow__arrow" aria-hidden="true">→</span>
-              <div class="safety-flow__step">
-                <span class="safety-flow__label">Operator UI</span>
-                <span class="safety-flow__sub">8 tabs · Bulgarian · high contrast</span>
+              <div class="safety-flow__row">
+                <span class="safety-flow__num">4</span>
+                <span class="safety-flow__dir safety-flow__dir--read">PLC → PC</span>
+                <span class="safety-flow__text">Readback verification — values match within tolerance</span>
               </div>
+              <div class="safety-flow__row">
+                <span class="safety-flow__num">5</span>
+                <span class="safety-flow__dir safety-flow__dir--write">PC → PLC</span>
+                <span class="safety-flow__text">Clear handshake — recipe delivered successfully</span>
+              </div>
+
+              <div class="safety-flow__divider">
+                <span class="safety-flow__divider-text">Operator Action on Touchscreen</span>
+              </div>
+
+              <div class="safety-flow__row safety-flow__row--operator">
+                <span class="safety-flow__num safety-flow__num--operator">6</span>
+                <span class="safety-flow__dir safety-flow__dir--operator">Operator</span>
+                <span class="safety-flow__text">Reviews recipe on touchscreen · adjusts water for humidity · presses START</span>
+              </div>
+
+              <div class="safety-flow__phase-label">Production Monitoring</div>
+
+              <div class="safety-flow__row">
+                <span class="safety-flow__num">7</span>
+                <span class="safety-flow__dir safety-flow__dir--read">PLC → PC</span>
+                <span class="safety-flow__text">Poll batch status and controller mode (auto / manual / emergency)</span>
+              </div>
+              <div class="safety-flow__row">
+                <span class="safety-flow__num">8</span>
+                <span class="safety-flow__dir safety-flow__dir--read">PLC → PC</span>
+                <span class="safety-flow__text">Batch complete — record results, deduct inventory, generate certificate</span>
+              </div>
+            </div>
+
+            <div class="safety-flow__gate">
+              <span class="safety-flow__gate-label">Safety Gate</span>
+              <span class="safety-flow__gate-text">Every write is checked against the allowed recipe range. Out-of-range writes are blocked and logged. The PC never sends start, stop, discharge, skip, or reset commands.</span>
             </div>
           </div>
 
           <ul class="proof proof--flagship" role="list">
-            <li><strong>14</strong> modules built</li>
-            <li><strong>496</strong> passing tests</li>
-            <li>Phase 4 of 5 in progress</li>
-            <li>Read-only at API level</li>
-            <li>Multi-plant profile system</li>
-            <li>Full Bulgarian operator UI</li>
+            <li><strong>1,637</strong> passing tests</li>
+            <li><strong>7</strong> tabs · full workflow</li>
+            <li>v2.0.0 feature-complete</li>
+            <li>Recipe-only bounded writes</li>
+            <li>Configurable Plant Builder</li>
+            <li>Concrete passport PDFs</li>
           </ul>
 
-          <p class="taught"><span class="taught__label">The Orchestration Challenge</span> Managing a complex, multi-session state where the AI must respect safety contracts without hallucinations. It required rigorous prompting and the discipline to define an offline testing layer so the AI could iterate without touching the live PLC.</p>
+          <p class="taught"><span class="taught__label">The Orchestration Challenge</span> Writing a 36,000+ word specification precise enough for AI to build safety-critical industrial software. Consulting a domain expert, documenting 19 confirmed decisions, and defining 24 non-negotiable rules that every AI session must follow. Then systematically verifying the result across 32 testing sessions covering normal use, extreme inputs, and 1,000-action randomized chaos.</p>
 
           <div class="status status--callout">
-            <p class="status__heading"><span class="status__dot status__dot--paused status__dot--opus"></span> Phase 4 of 5 in progress.</p>
-            <p class="status__subtitle">14 modules built and tested · safety-critical ui remaining</p>
-            <p>Core backend, PLC communication, business logic, and most UI tabs are complete. The remaining work involves safety-critical operator screens. Deliberately held for next-gen model evaluation before production deployment — the responsible call for a system where a UI error could affect physical equipment.</p>
+            <p class="status__heading"><span class="status__dot status__dot--live status__dot--opus"></span> v2.0.0 — feature-complete.</p>
+            <p class="status__subtitle">1,637 tests passing · 32 testing sessions · ready for hardware verification</p>
+            <p>All 7 tabs functional, full recipe-push handshake verified against the virtual controller, 1,637 behavioural tests passing across all sessions. Ready for hardware verification on the real Delta controller and Bulgarian-language acceptance testing with plant operators.</p>
           </div>
         </div>
       </article>
@@ -310,7 +351,7 @@
         <p class="section-label" id="how-label">How I work</p>
         <h2 class="section__title">The orchestration is the skill.</h2>
         <p class="section__lead">I describe outcomes in plain English. I let AI translate intent into working code, then I review, test, and iterate. The core skill is orchestration: knowing what to ask, how to read a model's output critically, when to switch tools, and when a problem requires a different approach.</p>
-        <p class="section__lead">I don't just accept generated code. After verifying functionality manually, I rigorously prompt the AI to write comprehensive unit tests that validate backend logic and edge cases — not just syntax. Nova Control alone has 496 passing tests.</p>
+        <p class="section__lead">I don't just accept generated code. After verifying functionality manually, I rigorously prompt the AI to write comprehensive unit tests that validate backend logic and edge cases — not just syntax. Nova Control alone has 1,637 passing tests across 32 sessions.</p>
         <p class="section__lead">My projects use real engineering practice: <strong>3-branch deployments</strong> (alpha&nbsp;→&nbsp;beta&nbsp;→&nbsp;main), <strong>modular architecture</strong> with clear dependency boundaries, and <code>.md</code> mapping files that act as agent-handoff documents — so any new session picks up where the last one stopped without losing context.</p>
         <p class="section__lead">I take ownership of the entire lifecycle — from architectural planning to deployment and bug fixing. The end result isn't just generated code; it's robust software with clean architecture, stable APIs, and passing test suites that solves actual business needs.</p>
       </div>
