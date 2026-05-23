@@ -101,7 +101,7 @@
       <article class="project" id="project-extension">
         <div class="container container--narrow">
           <div class="project__image">
-            <video class="project__video" preload="metadata" playsinline>
+            <video class="project__video" preload="metadata" playsinline controls>
               <source src="assets/fake discount bulgaria.webm" type="video/webm">
             </video>
             <button class="project__play" aria-label="Play video">
@@ -149,7 +149,7 @@
       <article class="project" id="project-sima-ma">
         <div class="container container--narrow">
           <div class="project__image">
-            <video class="project__video" preload="metadata" playsinline>
+            <video class="project__video" preload="metadata" playsinline controls>
               <source src="assets/sima-ma.webm" type="video/webm">
             </video>
             <button class="project__play" aria-label="Play video">
@@ -193,7 +193,7 @@
       <article class="project" id="project-malki">
         <div class="container container--narrow">
           <div class="project__image">
-            <video class="project__video" preload="metadata" playsinline>
+            <video class="project__video" preload="metadata" playsinline controls>
               <source src="assets/malki podaracheta.webm" type="video/webm">
             </video>
             <button class="project__play" aria-label="Play video">
@@ -260,34 +260,9 @@
             <p>To ensure industrial stability, the application was verified with 1,637 behavioural and integration tests. These cover cross-tab state communication, edge-case input validation, and randomized fuzzer runs, confirming the system operates reliably under extreme conditions.</p>
           </div>
 
-          <div class="safety-flow" aria-label="Safety architecture diagram showing the recipe-only write handshake">
-            <p class="safety-flow__title">Safety Architecture — Recipe-Only Handshake</p>
-            <p class="safety-flow__intro">The PC writes only recipe targets. Physical control commands (start, stop, discharge) remain with the operator at the touchscreen.</p>
-
-            <div class="safety-flow__sequence">
-              <div class="safety-flow__row">
-                <span class="safety-flow__num">1</span>
-                <span class="safety-flow__dir safety-flow__dir--write">PC → PLC</span>
-                <span class="safety-flow__text"><strong>Recipe Push</strong> — Writes recipe targets through a strict range-limiting Safety Gate</span>
-              </div>
-
-              <div class="safety-flow__row safety-flow__row--operator">
-                <span class="safety-flow__num safety-flow__num--operator">2</span>
-                <span class="safety-flow__dir safety-flow__dir--operator">Operator</span>
-                <span class="safety-flow__text"><strong>Physical Verification</strong> — Operator reviews targets on touchscreen and presses physical START button</span>
-              </div>
-
-              <div class="safety-flow__row">
-                <span class="safety-flow__num">3</span>
-                <span class="safety-flow__dir safety-flow__dir--read">PLC → PC</span>
-                <span class="safety-flow__text"><strong>Status Poll</strong> — PC reads back progress, logs actual weights, and generates PDF concrete passports</span>
-              </div>
-            </div>
-
-            <div class="safety-flow__gate">
-              <span class="safety-flow__gate-label">Safety Gate</span>
-              <span class="safety-flow__gate-text">Every write is checked against allowed limits. Out-of-range values are blocked. The software cannot physically trigger start, stop, discharge, or skip commands.</span>
-            </div>
+          <div class="safety-flow safety-flow--compact" aria-label="Safety architecture: recipe-only writes">
+            <p class="safety-flow__title">Safety Architecture</p>
+            <p class="safety-flow__oneliner">PC pushes recipe targets only → Operator presses physical START → PC reads back status and logs results. The software cannot trigger start, stop, or discharge commands.</p>
           </div>
 
           <ul class="proof proof--flagship" role="list">
@@ -314,29 +289,29 @@
     <section class="section section--how" id="how" aria-labelledby="how-label">
       <div class="container container--narrow">
         <p class="section-label" id="how-label">How I work</p>
-        <h2 class="section__title">Orchestration is the skill.</h2>
-        <p class="section__lead">Modern development is shifting from manual coding to system orchestration. Translating intent into production-ready software requires strict architectural boundaries and rigorous verification.</p>
-        
+        <h2 class="section__title">I don't write the code. I make sure it works.</h2>
+        <p class="section__lead">Every project starts with a problem I break down into clear pieces — what the system needs to do, where the boundaries are, and what "done" actually looks like. Then I direct AI tools to build it, piece by piece, while I test and verify every step.</p>
+
         <ul style="list-style: none; padding: 0; margin: 1.75rem 0 0 0; display: flex; flex-direction: column; gap: 1.25rem;">
           <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
             <span style="color: var(--accent); font-weight: bold; font-family: var(--mono); font-size: 0.875rem; padding-top: 0.1rem;">[1]</span>
             <div>
-              <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.125rem; color: var(--text);">Architecture & Boundaries</strong>
-              <span style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; display: block;">Decomposing complex requirements into clear, isolated components with strong interface boundaries before directing code generation.</span>
+              <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.125rem; color: var(--text);">Break the problem down</strong>
+              <span style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; display: block;">Before any code is generated, I map out the full system — what each part does, how parts connect, and what can go wrong. The AI builds faster when it gets clear, isolated tasks instead of vague requests.</span>
             </div>
           </li>
           <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
             <span style="color: var(--accent); font-weight: bold; font-family: var(--mono); font-size: 0.875rem; padding-top: 0.1rem;">[2]</span>
             <div>
-              <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.125rem; color: var(--text);">Automated Verification</strong>
-              <span style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; display: block;">Securing backend and UI stability with comprehensive test suites—such as the 1,637 passing tests for Nova Control—to ensure absolute safety in production.</span>
+              <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.125rem; color: var(--text);">Test until it actually works</strong>
+              <span style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; display: block;">Generated code gets the same scrutiny as hand-written code. Nova Control has 1,637 tests not because AI demanded it, but because industrial software requires proof that every edge case is handled.</span>
             </div>
           </li>
           <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
             <span style="color: var(--accent); font-weight: bold; font-family: var(--mono); font-size: 0.875rem; padding-top: 0.1rem;">[3]</span>
             <div>
-              <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.125rem; color: var(--text);">Lifecycle Ownership</strong>
-              <span style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; display: block;">Taking complete responsibility for the entire lifecycle—from deployment planning to long-term maintenance and focused iteration.</span>
+              <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.125rem; color: var(--text);">Own it from start to finish</strong>
+              <span style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; display: block;">Architecture, deployment, maintenance — all of it. The Fake Discount extension is live on the Chrome Web Store and gets updated regularly. These aren't demos — they're products.</span>
             </div>
           </li>
         </ul>
