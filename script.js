@@ -32,14 +32,29 @@
   }
 
   /* ---- Video play buttons ---- */
-  document.querySelectorAll('.project__play').forEach((btn) => {
-    const video = btn.previousElementSibling;
-    btn.addEventListener('click', () => {
-      btn.classList.add('is-hidden');
-      video.play();
+  document.querySelectorAll('.project__image').forEach((frame) => {
+    const video = frame.querySelector('.project__video');
+    const btn = frame.querySelector('.project__play');
+    if (!video || !btn) return;
+
+    const showButton = () => btn.classList.remove('is-hidden');
+    const hideButton = () => btn.classList.add('is-hidden');
+
+    btn.addEventListener('click', async () => {
+      hideButton();
+      try {
+        await video.play();
+      } catch (e) {
+        showButton();
+      }
+    });
+
+    video.addEventListener('play', hideButton);
+    video.addEventListener('pause', () => {
+      if (!video.ended) showButton();
     });
     video.addEventListener('ended', () => {
-      btn.classList.remove('is-hidden');
+      showButton();
       video.currentTime = 0;
     });
   });

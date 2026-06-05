@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#0a0a0a">
 
   <title>Victor Tserovski — AI Orchestrator</title>
-  <meta name="description" content="Victor Tserovski — AI Orchestrator. Production-ready software through AI-augmented development. Focused on system architecture, test coverage, and reliable delivery.">
+  <meta name="description" content="Victor Tserovski — AI Orchestrator. Working software through AI-augmented development, with a focus on system architecture, test coverage, and reliable delivery.">
 
   <meta property="og:title" content="Victor Tserovski — AI Orchestrator">
-  <meta property="og:description" content="Production-ready software through AI-augmented development.">
+  <meta property="og:description" content="Working software through AI-augmented development.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://victortserovski.github.io">
   <meta property="og:image" content="https://victortserovski.github.io/assets/og-image%20VT.jpg">
@@ -38,7 +38,7 @@
         <div class="hero__content">
           <p class="hero__name">Victor Tserovski</p>
           <h1 class="hero__headline">I build working software by <span class="accent">directing AI</span>.</h1>
-          <p class="hero__sub">From polished Next.js e-commerce platforms to industrial desktop systems backed by <strong>1,637 passing tests</strong>—focusing on system architecture, testing, and reliable delivery.</p>
+          <p class="hero__sub">From polished Next.js e-commerce platforms to industrial desktop systems backed by <strong>2,105 passing tests</strong>—focusing on system architecture, testing, and reliable delivery.</p>
           <div class="hero__cta">
             <a class="btn btn--primary" href="#projects">See projects</a>
             <a class="btn btn--ghost" href="#contact">Get in touch</a>
@@ -226,7 +226,7 @@
             <li>17-question FAQ + schema</li>
             <li>GDPR cookie consent</li>
             <li>Confetti on order success</li>
-            <li>GEO score ~85 / 100</li>
+            <li>SEO / GEO audit pass</li>
           </ul>
 
           <p class="taught"><span class="taught__label">The Hard Part</span> Mapping out a complex 60-combination customization wizard for the AI to build, and rigorously testing the output to ensure the cart and discount rules worked flawlessly across all edge cases.</p>
@@ -237,12 +237,17 @@
       <article class="project project--flagship" id="project-novacontrol">
         <div class="container container--narrow">
           <div class="project__image">
-            <img src="assets/project-novacontrol.svg" alt="Nova Control — Concrete Plant Dispatcher" loading="lazy">
+            <video class="project__video" preload="metadata" playsinline controls>
+              <source src="assets/Nova Control.webm" type="video/webm">
+            </video>
+            <button class="project__play" aria-label="Play video">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23"/><polygon points="19,14 19,34 36,24"/></svg>
+            </button>
           </div>
           <header class="project__header">
             <p class="project__flagship-label">Flagship Project</p>
             <h3 class="project__title">Nova Control: Concrete Plant Dispatcher</h3>
-            <p class="project__tag"><span class="tag">Python Desktop App · 7 tabs · 1,637 tests · v2.0.0</span></p>
+            <p class="project__tag"><span class="tag">Python Desktop App · 7 tabs · 2,105 tests · v2.0.1</span></p>
             <p class="project__quote">"A workflow and recipe dispatcher for concrete batching plants, featuring a hardware-isolated safety architecture that ensures critical controls remain with the operator."</p>
           </header>
 
@@ -256,8 +261,8 @@
             <p>Additional features include a configurable Plant Builder, automated concrete passport PDF generation per truck, stock tracking with material substitution, and an active fuzzer engine to verify UI stability under randomized stress.</p>
 
             <h4>How I built it</h4>
-            <p>The system was built using AI tools across 32 dedicated testing sessions to manage a codebase containing over 36,000 lines of code and 20,000 lines of test code. By consulting a concrete plant expert, 19 production decisions were mapped out covering how recipe adjustments, inventory deductions, and material substitutions behave in real-world scenarios.</p>
-            <p>To ensure industrial stability, the application was verified with 1,637 behavioural and integration tests. These cover cross-tab state communication, edge-case input validation, and randomized fuzzer runs, confirming the system operates reliably under extreme conditions.</p>
+            <p>The system was built using AI tools across focused implementation, testing, and audit sessions to manage a codebase containing roughly 36,800 lines of production Python and 34,400 lines of test code. By consulting a concrete plant expert, 19 production decisions were mapped out covering how recipe adjustments, inventory deductions, and material substitutions behave in real-world scenarios.</p>
+            <p>To ensure industrial stability, the application was verified with 2,105 behavioural and integration tests. These cover cross-tab state communication, edge-case input validation, real-dialog UI flows, PLC driver loopbacks, and randomized fuzzer runs.</p>
           </div>
 
           <div class="safety-flow safety-flow--compact" aria-label="Safety architecture: recipe-only writes">
@@ -266,20 +271,20 @@
           </div>
 
           <ul class="proof proof--flagship" role="list">
-            <li><strong>1,637</strong> passing tests</li>
+            <li><strong>2,105</strong> passing tests</li>
             <li><strong>7</strong> tabs · full workflow</li>
-            <li>v2.0.0 feature-complete</li>
+            <li>v2.0.1 feature-complete</li>
             <li>Recipe-only bounded writes</li>
             <li>Configurable Plant Builder</li>
             <li>Concrete passport PDFs</li>
           </ul>
 
-          <p class="taught"><span class="taught__label">The Hard Part</span> Structuring a codebase of 36,000+ lines of code and 20,000+ lines of test code using AI tools. This required defining clean architectural boundaries, mapping 19 domain-expert field decisions, and validating robustness across 32 dedicated testing sessions.</p>
+          <p class="taught"><span class="taught__label">The Hard Part</span> Structuring a large Python codebase using AI tools without losing the safety contract. This required defining clean architectural boundaries, mapping 19 domain-expert field decisions, and validating robustness through a 2,105-test suite plus multi-agent audit passes.</p>
 
           <div class="status status--callout">
-            <p class="status__heading"><span class="status__dot status__dot--live status__dot--opus"></span> v2.0.0 — feature-complete.</p>
-            <p class="status__subtitle">1,637 tests passing · 32 testing sessions · ready for hardware verification</p>
-            <p>All 7 tabs functional, full recipe-push handshake verified against the virtual controller, 1,637 behavioural tests passing across all sessions. Ready for hardware verification on the real Delta controller and Bulgarian-language acceptance testing with plant operators.</p>
+            <p class="status__heading"><span class="status__dot status__dot--live status__dot--opus"></span> v2.0.1 — software feature-complete.</p>
+            <p class="status__subtitle">2,105 tests passing · P6K hardware sign-off pending</p>
+            <p>All 7 tabs functional, full recipe-push handshake verified against the virtual controller, and 2,105 behavioural tests passing. The software is ready for structured hardware verification on the real Delta controller, followed by Bulgarian-language acceptance testing with plant operators before production use.</p>
           </div>
         </div>
       </article>
@@ -304,7 +309,7 @@
             <span style="color: var(--accent); font-weight: bold; font-family: var(--mono); font-size: 0.875rem; padding-top: 0.1rem;">[2]</span>
             <div>
               <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.125rem; color: var(--text);">Test until it actually works</strong>
-              <span style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; display: block;">Generated code gets the same scrutiny as hand-written code. Nova Control has 1,637 tests not because AI demanded it, but because industrial software requires proof that every edge case is handled.</span>
+              <span style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; display: block;">Generated code gets the same scrutiny as hand-written code. Nova Control has 2,105 tests not because AI demanded it, but because industrial software requires proof that edge cases are handled before hardware sign-off.</span>
             </div>
           </li>
           <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
