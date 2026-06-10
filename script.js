@@ -37,15 +37,30 @@
     const btn = frame.querySelector('.project__play');
     if (!video || !btn) return;
 
-    const showButton = () => btn.classList.remove('is-hidden');
-    const hideButton = () => btn.classList.add('is-hidden');
+    const showButton = () => {
+      video.removeAttribute('controls');
+      btn.classList.remove('is-hidden');
+    };
+    const hideButton = () => {
+      btn.classList.add('is-hidden');
+      video.setAttribute('controls', '');
+    };
 
-    btn.addEventListener('click', async () => {
+    const playVideo = async () => {
       hideButton();
       try {
         await video.play();
       } catch (e) {
         showButton();
+      }
+    };
+
+    showButton();
+
+    btn.addEventListener('click', playVideo);
+    video.addEventListener('click', () => {
+      if (video.paused) {
+        playVideo();
       }
     });
 

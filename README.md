@@ -1,6 +1,6 @@
 # victortserovski.github.io
 
-Personal portfolio for **Victor Tserovski** — AI Orchestrator.
+Personal portfolio for **Victor Tserovski** - Senior Data Operations Analyst.
 
 > "I build working software by directing AI."
 
