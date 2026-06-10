@@ -2,13 +2,13 @@
 
 Personal portfolio for **Victor Tserovski** - Senior Data Operations Analyst.
 
-> "I build working software by directing AI."
+> "I build working software with AI-assisted development."
 
 Live site: [victortserovski.github.io](https://victortserovski.github.io)
 
 ## What's inside
 
-A single-page portfolio showcasing four products built with AI-augmented development:
+A single-page portfolio showcasing four products built with AI-assisted development:
 
 1. **Fake Discount Bulgaria** — Chrome extension tracking real price history across 20 Bulgarian e-commerce sites. [Live on Chrome Web Store](https://chromewebstore.google.com/detail/fake-discount-bg/napohmhembobenfaaanfdabjehnjcdci).
 2. **SIMA-MA** — 13-page bilingual industrial website for a concrete-equipment manufacturer.
@@ -21,7 +21,7 @@ Web applications · Desktop software · Browser extensions · E-commerce systems
 
 ## Tech
 
-Plain HTML, CSS, and vanilla JavaScript. No frameworks, no build step. The site itself demonstrates the approach it describes: a polished product shipped with AI-augmented development.
+Plain HTML, CSS, and vanilla JavaScript. No frameworks, no build step. The site itself demonstrates the approach it describes: a polished product shipped with AI-assisted development.
 
 Includes a **Save as PDF** button that generates a print-optimized resume directly from the page — no external dependencies.
 

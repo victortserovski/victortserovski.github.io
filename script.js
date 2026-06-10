@@ -10,7 +10,20 @@
 
   /* ---- Reveal on scroll ---- */
   const revealTargets = document.querySelectorAll(
-    '.section__title, .section__lead, .toolbelt-grid, .note, .project, .contact-list'
+    [
+      '.section__title',
+      '.section__lead',
+      '.toolbelt-grid',
+      '.note',
+      '.project__image',
+      '.project__header',
+      '.project__body',
+      '.proof',
+      '.taught',
+      '.safety-flow',
+      '.status--callout',
+      '.contact-list'
+    ].join(', ')
   );
 
   if (prefersReducedMotion || !('IntersectionObserver' in window)) {
@@ -26,7 +39,7 @@
           }
         });
       },
-      { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }
+      { rootMargin: '0px 0px -8% 0px', threshold: 0.08 }
     );
     revealTargets.forEach((el) => io.observe(el));
   }
