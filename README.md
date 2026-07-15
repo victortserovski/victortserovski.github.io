@@ -1,34 +1,28 @@
 # victortserovski.github.io
 
-Personal portfolio for **Victor Tserovski** - Senior Data Operations Analyst.
+Personal portfolio for **Victor Tserovski**, Senior Data Operations Analyst.
 
-> "I build working software with AI-assisted development."
+> I build working software with AI-assisted development.
 
-Live site: [victortserovski.github.io](https://victortserovski.github.io)
+Live site: [victortserovski.github.io](https://victortserovski.github.io/)
 
-## What's inside
+## Projects
 
-A single-page portfolio showcasing four products built with AI-assisted development:
+1. **Nova Control** - A Windows application for managing concrete-plant recipes, orders, materials, dispatching, and reports. It has seven main sections, 40 answers from a plant expert, and 2,635 automated tests. The software work is complete, but testing with the real PLC and Bulgarian operators is still required.
+2. **Fake Discount Bulgaria** - A live Chrome and Edge extension that saves daily prices from products a user visits across 20 Bulgarian stores, then helps the user judge whether a discount looks genuine. [Chrome Web Store](https://chromewebstore.google.com/detail/fake-discount-bg/napohmhembobenfaaanfdabjehnjcdci)
+3. **Малки Подаръчета** - A live ordering website for handmade gifts, with 81 pages and 60 event-and-theme combinations. [malkipodaracheta.bg](https://malkipodaracheta.bg/)
+4. **SIMA-MA** - A staged Bulgarian and English industrial website with 12 content pages, a 93-image project gallery, contact and privacy features, and an EU documents section. [Staging site](https://sima-ma.netlify.app/bg/)
 
-1. **Fake Discount Bulgaria** — Chrome extension tracking real price history across 20 Bulgarian e-commerce sites. [Live on Chrome Web Store](https://chromewebstore.google.com/detail/fake-discount-bg/napohmhembobenfaaanfdabjehnjcdci).
-2. **SIMA-MA** — 13-page bilingual industrial website for a concrete-equipment manufacturer.
-3. **Малки Подаръчета** — 81-page Next.js e-commerce flow for a small home workshop, with a 60-combination customization wizard.
-4. **Nova Control** — Windows desktop app (Python + PyQt6) for concrete batching dispatch workflows · 7 tabs · v2.0.1 · 2,105 passing tests.
+## Positioning
 
-## Capabilities
+Victor's background is in data operations, not traditional software development. These projects were built with AI coding tools. His role was to explain the requirements, make decisions, test the results, and keep each project's current status clear.
 
-Web applications · Desktop software · Browser extensions · E-commerce systems · Bilingual websites · Industrial monitoring
+## Site
 
-## Tech
+The portfolio itself uses simple HTML, CSS, and JavaScript files. It works on desktop and mobile, includes accessible video controls and reduced-motion support, and provides the information needed when the site is shared on social media.
 
-Plain HTML, CSS, and vanilla JavaScript. No frameworks, no build step. The site itself demonstrates the approach it describes: a polished product shipped with AI-assisted development.
-
-Includes a **Save as PDF** button that generates a print-optimized resume directly from the page — no external dependencies.
-
-## Deploy
-
-GitHub Pages auto-serves from `main`. Push triggers a deploy within ~1 minute.
+GitHub Pages serves the `main` branch. A push normally deploys within a few minutes.
 
 ## License
 
-All rights reserved. © Victor Tserovski.
+All rights reserved. Copyright Victor Tserovski.

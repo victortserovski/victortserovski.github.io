@@ -1,5 +1,5 @@
-/* Victor Tserovski — portfolio interactions
- * Minimal JS: reveal-on-scroll + click-to-copy contact card.
+/* Victor Tserovski - portfolio interactions
+ * Reveal-on-scroll, project navigation, video controls, and contact actions.
  * (Smooth scroll is handled by CSS scroll-behavior; honors prefers-reduced-motion.)
  */
 
@@ -15,6 +15,7 @@
       '.section__lead',
       '.toolbelt-grid',
       '.note',
+      '.project-nav',
       '.project__image',
       '.project__header',
       '.project__body',
@@ -22,6 +23,7 @@
       '.taught',
       '.safety-flow',
       '.status--callout',
+      '.work-list',
       '.contact-list'
     ].join(', ')
   );
@@ -44,6 +46,19 @@
     revealTargets.forEach((el) => io.observe(el));
   }
 
+  const revealCurrentHashTarget = () => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    revealTargets.forEach((el) => {
+      if (el === target || target.contains(el)) el.classList.add('is-visible');
+    });
+  };
+
+  revealCurrentHashTarget();
+  window.addEventListener('hashchange', revealCurrentHashTarget);
+
   /* ---- Video play buttons ---- */
   document.querySelectorAll('.project__image').forEach((frame) => {
     const video = frame.querySelector('.project__video');
@@ -53,18 +68,25 @@
     const showButton = () => {
       video.removeAttribute('controls');
       btn.classList.remove('is-hidden');
+      btn.setAttribute('aria-hidden', 'false');
     };
     const hideButton = () => {
       btn.classList.add('is-hidden');
+      btn.setAttribute('aria-hidden', 'true');
       video.setAttribute('controls', '');
     };
 
     const playVideo = async () => {
+      document.querySelectorAll('.project__video').forEach((otherVideo) => {
+        if (otherVideo !== video && !otherVideo.paused) otherVideo.pause();
+      });
       hideButton();
       try {
+        if (video.readyState === HTMLMediaElement.HAVE_NOTHING) video.load();
         await video.play();
       } catch (e) {
-        showButton();
+        // Keep native controls as a single-click fallback when a browser blocks playback.
+        hideButton();
       }
     };
 
@@ -86,6 +108,37 @@
       video.currentTime = 0;
     });
   });
+
+  /* ---- Active project navigation ---- */
+  const projectLinks = [...document.querySelectorAll('.project-nav a')];
+  const projectSections = projectLinks
+    .map((link) => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+
+  const setActiveProject = (projectId) => {
+    projectLinks.forEach((link) => {
+      const isActive = link.getAttribute('href') === `#${projectId}`;
+      link.classList.toggle('is-active', isActive);
+      if (isActive) {
+        link.setAttribute('aria-current', 'true');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  };
+
+  if ('IntersectionObserver' in window && projectSections.length) {
+    const projectObserver = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActiveProject(visible.target.id);
+      },
+      { rootMargin: '-22% 0px -58% 0px', threshold: [0, 0.1, 0.25] }
+    );
+    projectSections.forEach((section) => projectObserver.observe(section));
+  }
 
   /* ---- Email copy confetti ---- */
   function spawnConfetti(originEl) {

@@ -4,370 +4,404 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0a0a">
+  <meta name="robots" content="index, follow">
 
   <title>Victor Tserovski - Senior Data Operations Analyst</title>
-  <meta name="description" content="Victor Tserovski - Senior Data Operations Analyst. Portfolio of AI-assisted software projects shaped by data operations, process mapping, testing, and reliable delivery.">
+  <meta name="description" content="Victor Tserovski is a Senior Data Operations Analyst who uses AI coding tools to turn practical problems into tested browser, web, and desktop software.">
+  <link rel="canonical" href="https://victortserovski.github.io/">
 
   <meta property="og:title" content="Victor Tserovski - Senior Data Operations Analyst">
-  <meta property="og:description" content="AI-assisted software projects from a data operations background, focused on practical systems, testing, and delivery.">
+  <meta property="og:description" content="Practical software built with AI coding tools, clear requirements, and careful testing.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://victortserovski.github.io">
-  <meta property="og:image" content="https://victortserovski.github.io/assets/og-image%20VT.jpg">
+  <meta property="og:url" content="https://victortserovski.github.io/">
+  <meta property="og:image" content="https://victortserovski.github.io/assets/og-image-v2.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Victor Tserovski - I build working software with AI-assisted development">
+
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://victortserovski.github.io/assets/og-image%20VT.jpg">
+  <meta name="twitter:title" content="Victor Tserovski - Senior Data Operations Analyst">
+  <meta name="twitter:description" content="Practical software built with AI coding tools, clear requirements, and careful testing.">
+  <meta name="twitter:image" content="https://victortserovski.github.io/assets/og-image-v2.png">
+  <meta name="twitter:image:alt" content="Victor Tserovski - I build working software with AI-assisted development">
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Victor Tserovski",
+    "url": "https://victortserovski.github.io/",
+    "image": "https://victortserovski.github.io/assets/headshot.jpg",
+    "jobTitle": "Senior Data Operations Analyst",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "NielsenIQ"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/victortserovski/"
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <main id="main">
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary navigation">
+      <a class="site-nav__brand" href="#hero" aria-label="Victor Tserovski, back to top">VT</a>
+      <div class="site-nav__links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#how">How I work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-    <!-- 1. HERO -->
+  <main id="main">
     <section class="hero" id="hero" aria-label="Introduction">
       <div class="container hero__inner">
         <div class="hero__photo">
-          <img src="assets/headshot.jpg" alt="Victor Tserovski" width="240" height="240" loading="eager">
+          <img src="assets/headshot.jpg" alt="Victor Tserovski" width="404" height="404" loading="eager">
         </div>
         <div class="hero__content">
           <p class="hero__name">Victor Tserovski</p>
-          <h1 class="hero__headline">I build working software with <span class="accent">AI-assisted development</span>.</h1>
-          <p class="hero__sub">From polished Next.js e-commerce platforms to industrial desktop systems backed by <strong>2,105 passing tests</strong> - built with a workflow focused on process mapping, testing, and reliable delivery.</p>
+          <h1 class="hero__headline">I build working software with <span class="accent">AI&#8209;assisted development</span>.</h1>
+          <p class="hero__sub">I turn real problems into browser tools, websites, and desktop software by explaining what they need to do, using AI coding tools, and testing the results carefully.</p>
           <div class="hero__cta">
             <a class="btn btn--primary" href="#projects">See projects</a>
             <a class="btn btn--ghost" href="#contact">Get in touch</a>
-            <button class="btn btn--ghost" type="button" data-action="print" aria-label="Save this page as a PDF resume">Save as PDF</button>
+            <button class="btn btn--ghost" type="button" data-action="print" aria-label="Open the print dialog for this portfolio">Print portfolio</button>
           </div>
         </div>
       </div>
-      <a class="hero__scroll" href="#about" aria-label="Scroll to next section">
-        <span aria-hidden="true">↓</span>
+      <a class="hero__scroll" href="#about" aria-label="Scroll to About">
+        <span aria-hidden="true">&darr;</span>
       </a>
     </section>
 
-    <!-- 2. ABOUT -->
     <section class="section section--about" id="about" aria-labelledby="about-label">
       <div class="container container--narrow">
         <p class="section-label" id="about-label">About</p>
-        <p class="section__lead">Working at <strong>NielsenIQ</strong> as a <strong>Senior Data Operations Analyst</strong>, I bring a data-operations mindset to software projects: process mapping, edge-case thinking, QA, and clear documentation. Over the last <strong>18 months</strong>, I have used AI-assisted development to turn practical problems into working tools, from a Next.js e-commerce flow to a Python desktop app integrated with industrial hardware.</p>
-        <p class="section__lead">My path is not a traditional computer-science-to-developer track, and I am intentional about that. The value I bring is translating messy operational requirements into structured systems, using AI tools with precise specifications, and validating the result through tests, reviews, and real user feedback.</p>
+        <p class="section__lead">I work at <strong>NielsenIQ</strong> as a <strong>Senior Data Operations Analyst</strong>. My day job has taught me to understand complicated processes, spot missing details, check data carefully, and document how things should work. I use those same skills when building software with AI.</p>
+        <p class="section__lead">My background is not in programming, and I do not write all of the code by hand. I explain what the software needs to do, break the work into clear steps, use AI coding tools to build it, and test the finished result until it behaves correctly.</p>
       </div>
     </section>
 
-    <!-- 3. TOOLBELT -->
     <section class="section section--toolbelt" id="toolbelt" aria-labelledby="toolbelt-label">
       <div class="container container--narrow">
         <p class="section-label" id="toolbelt-label">Toolbelt</p>
-        <h2 class="section__title">What I work with.</h2>
-        <p class="section__lead" style="margin-top: -1rem; margin-bottom: 2rem;">AI-assisted development for speed and iteration, proven technologies for stability.</p>
-        <p class="toolbelt-heading">What I deliver</p>
+        <h2 class="section__title">What I build with AI.</h2>
+        <p class="section__lead toolbelt__intro">I focus on the problem, the rules, and the final result. AI coding tools handle much of the code.</p>
+
+        <p class="toolbelt-heading">Types of projects</p>
         <ul class="capability-list" role="list">
           <li class="capability">Web Applications</li>
           <li class="capability">Desktop Software</li>
           <li class="capability">Browser Extensions</li>
-          <li class="capability">E-commerce Systems</li>
+          <li class="capability">Ordering Websites</li>
           <li class="capability">Bilingual Websites</li>
-          <li class="capability">Industrial Monitoring</li>
+          <li class="capability">Work Process Tools</li>
         </ul>
-        <p class="toolbelt-heading">Tools I use</p>
+
+        <p class="toolbelt-heading">Technologies used in these projects</p>
         <ul class="toolbelt-grid" role="list">
-          <li class="tool"><span class="tool__name">Claude Code</span><span class="tool__sub">primary ai tool</span></li>
-          <li class="tool"><span class="tool__name">Cursor</span><span class="tool__sub">ai-powered ide</span></li>
-          <li class="tool"><span class="tool__name">Python + PyQt6</span><span class="tool__sub">desktop applications</span></li>
-          <li class="tool"><span class="tool__name">Next.js + Tailwind</span><span class="tool__sub">web applications</span></li>
-          <li class="tool"><span class="tool__name">Chrome Extensions</span><span class="tool__sub">browser tools · mv3</span></li>
-          <li class="tool"><span class="tool__name">Cloudflare R2</span><span class="tool__sub">asset delivery</span></li>
-          <li class="tool"><span class="tool__name">Web3Forms</span><span class="tool__sub">contact & orders</span></li>
-          <li class="tool"><span class="tool__name">Netlify · GitHub Pages</span><span class="tool__sub">hosting & deployment</span></li>
+          <li class="tool"><span class="tool__name">Claude Code</span><span class="tool__sub">builds and changes code</span></li>
+          <li class="tool"><span class="tool__name">OpenAI Codex</span><span class="tool__sub">reviews, testing, and fixes</span></li>
+          <li class="tool"><span class="tool__name">Python + PyQt6</span><span class="tool__sub">used for Nova Control</span></li>
+          <li class="tool"><span class="tool__name">Next.js + React</span><span class="tool__sub">used for Малки Подаръчета</span></li>
+          <li class="tool"><span class="tool__name">Chrome Extensions</span><span class="tool__sub">used for Fake Discount</span></li>
+          <li class="tool"><span class="tool__name">HTML + CSS + JavaScript</span><span class="tool__sub">used for SIMA-MA and this site</span></li>
+          <li class="tool"><span class="tool__name">Cloudflare R2</span><span class="tool__sub">stores project images</span></li>
+          <li class="tool"><span class="tool__name">Netlify + GitHub Pages</span><span class="tool__sub">hosts the websites</span></li>
         </ul>
-        <p class="note">The workflow is AI-assisted rather than traditional hand-coding, focusing on system architecture, problem decomposition, testing, and systematic iteration to turn concepts into reliable working software.</p>
+        <p class="note">I am not presenting myself as an expert programmer in every technology listed here. I use these technologies through AI coding tools, while I focus on explaining the requirements, checking the behavior, and making sure the finished product solves the original problem.</p>
       </div>
     </section>
 
-    <!-- 4. PROJECTS -->
     <section class="section section--projects" id="projects" aria-labelledby="projects-label">
       <div class="container container--narrow">
         <p class="section-label" id="projects-label">Projects</p>
-        <h2 class="section__title">Four built. Four stories.</h2>
+        <h2 class="section__title">Selected work.</h2>
+        <p class="section__lead">Four practical projects. Some are live, one is staged, and Nova Control still needs real-machine testing.</p>
       </div>
 
-      <!-- Project 1: Extension -->
-      <article class="project" id="project-extension">
-        <div class="container container--narrow">
-          <div class="project__image">
-            <video class="project__video" preload="metadata" playsinline>
-              <source src="assets/fake discount bulgaria.webm" type="video/webm">
-            </video>
-            <button class="project__play" type="button" aria-label="Play video">
-              <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23"/><polygon points="19,14 19,34 36,24"/></svg>
-            </button>
-          </div>
-          <header class="project__header">
-            <h3 class="project__title">Fake Discount Bulgaria</h3>
-            <p class="project__tag">
-              <span class="tag">Chrome Extension</span>
-              <span class="status" style="display: inline-flex; margin-top: 0; margin-left: 1rem; font-size: 0.875rem;"><span class="status__dot status__dot--live"></span> Live on <a class="status__link" href="https://chromewebstore.google.com/detail/fake-discount-bg/napohmhembobenfaaanfdabjehnjcdci" target="_blank" rel="noopener noreferrer" style="margin-left: 0.25rem;">Chrome Web Store ↗</a></span>
-            </p>
-            <p class="project__quote">"Covers 20 Bulgarian e-commerce sites. Tracks real price history automatically and exposes when a promotion isn’t as good as it looks."</p>
-          </header>
-
-          <div class="project__body">
-            <h4>The problem</h4>
-            <p>Bulgarian e-commerce has a fake-discount problem. Retailers raise prices before a "sale" so the markdown looks bigger than it is. This happens across the entire market — from electronics giants like <a href="https://www.emag.bg/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">eMAG</a> and <a href="https://www.ozone.bg/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Ozone</a> to fashion stores like <a href="https://www.aboutyou.bg/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">About You</a> and pharmacies like <a href="https://www.sopharmacy.bg/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Sopharmacy</a>. Since no existing tool offered sufficient coverage across Bulgarian stores, this project was developed to support 20 of the country's major e-commerce websites.</p>
-
-            <h4>What I built</h4>
-            <p>A Chrome/Edge extension with 20 dedicated per-site content scripts that automatically tracks every product you visit. It shows a real-time verdict directly on the page — <strong>Fake discount, Real deal, Volatile price, Stable price, or Tracking</strong> — with a visual price-history chart and an explanation of why it reached that conclusion.</p>
-            <p>Every observation is also synced to a Supabase cloud database, building a shared price-history dataset across all installs. For products with exposed EAN barcodes, the system can cross-reference the same product across different stores. The extension handles single-page apps (About You, Answear, dm), currency traps (BGN vs EUR), out-of-stock detection, and upsell-rail isolation — each site has its own extraction logic.</p>
-
-            <h4>How I built it</h4>
-            <p>Built using <strong>Claude Code</strong>. The development involved establishing the core product architecture, verdict logic, and per-site extraction rules for all 20 stores—each presenting unique HTML structures, SPA navigation, currency variations, and lazy-loaded elements. The main challenge lay in specifying constraints clearly enough to produce 20 separate, robust content scripts feeding into a unified storage and verdict system, while surviving anti-bot protections without breaking.</p>
-          </div>
-
-          <h4>Key Features</h4>
-          <ul class="proof" role="list" style="margin-top: 0.625rem;">
-            <li>20 Bulgarian e-stores</li>
-            <li>5-tier verdict system</li>
-            <li>Supabase cloud sync</li>
-            <li>EAN cross-site matching</li>
-            <li>SPA navigation handling</li>
-            <li>Bilingual BG / EN</li>
-            <li>Price-target alerts</li>
-            <li>Export / import JSON</li>
-          </ul>
-
-          <p class="taught"><span class="taught__label">The Hard Part</span> Defining extraction rules for 20 different site structures — SPAs, currency traps, anti-bot protections, out-of-stock edge cases — and specifying a unified verdict cascade that produces consistent, explainable results across all of them.</p>
+      <nav class="project-nav" aria-label="Jump to a project">
+        <div class="project-nav__inner container">
+          <a href="#project-novacontrol"><span>01</span>Nova Control</a>
+          <a href="#project-extension"><span>02</span>Fake Discount</a>
+          <a href="#project-malki"><span>03</span>Малки Подаръчета</a>
+          <a href="#project-sima-ma"><span>04</span>SIMA-MA</a>
         </div>
-      </article>
+      </nav>
 
-      <!-- Project 2: SIMA-MA -->
-      <article class="project" id="project-sima-ma">
-        <div class="container container--narrow">
-          <div class="project__image">
-            <video class="project__video" preload="metadata" playsinline>
-              <source src="assets/sima-ma.webm" type="video/webm">
-            </video>
-            <button class="project__play" type="button" aria-label="Play video">
-              <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23"/><polygon points="19,14 19,34 36,24"/></svg>
-            </button>
-          </div>
-          <header class="project__header">
-            <h3 class="project__title">SIMA-MA Industrial Website</h3>
-            <p class="project__tag">
-              <span class="tag">Bilingual Marketing Website</span>
-              <span class="status" style="display: inline-flex; margin-top: 0; margin-left: 1rem; font-size: 0.875rem;"><span class="status__dot status__dot--paused"></span> Staged <a class="status__link" href="https://sima-ma.netlify.app/bg/" target="_blank" rel="noopener noreferrer" style="margin-left: 0.25rem;">URL ↗</a> (waiting on domain transfer)</span>
-            </p>
-            <p class="project__quote">"A Bulgarian manufacturer needed a real bilingual web presence — not just a Facebook page."</p>
-          </header>
-
-          <div class="project__body">
-            <h4>The problem</h4>
-            <p>A Bulgarian manufacturer produces silo valves, custom steel fabrication, and industrial automation. They needed a serious bilingual website to reach both local and international buyers.</p>
-
-            <h4>What I built</h4>
-            <p>A 13-page bilingual website with directory-based i18n (<code>/bg/</code> and <code>/en/</code>), a custom canvas particles animation themed to the industry (gravel / sand / cement), a 79-photo gallery with category accordions and lightbox, a fully styled EU-funded project page with 16 mandatory PDF documents, and a Web3Forms API integration with anti-spam protection.</p>
-
-            <h4>How I built it</h4>
-            <p>Architected with <strong>Claude Code</strong>. Plain HTML, CSS, and JavaScript were chosen deliberately to guarantee fast page loads and simple long-term maintenance. The primary focus was translating visual and thematic concepts (such as the industry-themed particle animation) into precise technical requirements, then iterating through visual quality checks until the design matched the company's identity.</p>
-          </div>
-
-          <ul class="proof" role="list">
-            <li>13 pages BG / EN</li>
-            <li>Custom canvas animation</li>
-            <li>ManufacturingBusiness JSON-LD</li>
-            <li>hreflang + sitemap lastmod</li>
-            <li>Skip-to-content + focus-visible</li>
-            <li>Responsive to 320px</li>
-          </ul>
-
-          <p class="taught"><span class="taught__label">The Hard Part</span> Translating visual concepts like a custom particle system into precise prompts, and guiding the AI to build a bilingual site structure without relying on heavy frameworks.</p>
-        </div>
-      </article>
-
-      <!-- Project 3: Малки Подаръчета -->
-      <article class="project" id="project-malki">
-        <div class="container container--narrow">
-          <div class="project__image">
-            <video class="project__video" preload="metadata" playsinline>
-              <source src="assets/malki podaracheta.webm" type="video/webm">
-            </video>
-            <button class="project__play" type="button" aria-label="Play video">
-              <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23"/><polygon points="19,14 19,34 36,24"/></svg>
-            </button>
-          </div>
-          <header class="project__header">
-            <h3 class="project__title">Малки Подаръчета</h3>
-            <p class="project__tag">
-              <span class="tag">Next.js E-commerce · 81 pages</span>
-              <span class="status" style="display: inline-flex; margin-top: 0; margin-left: 1rem; font-size: 0.875rem;"><span class="status__dot status__dot--paused"></span> Staged <a class="status__link" href="https://malki-podaracheta.netlify.app/" target="_blank" rel="noopener noreferrer" style="margin-left: 0.25rem;">URL ↗</a> (final polish & domain setup)</span>
-            </p>
-            <p class="project__quote">"Built for my wife's home-based workshop. A fully functional e-commerce flow capable of receiving real orders, currently undergoing final visual polish."</p>
-          </header>
-
-          <div class="project__body">
-            <h4>The problem</h4>
-            <p>My wife makes handmade gifts for children's events from a small home workshop. She needed a simple online presence with a real ordering flow for those custom requests, instead of handling everything through Facebook messages.</p>
-
-            <h4>What I built</h4>
-            <p>A full Next.js 15 e-commerce site with <strong>81 static pages</strong>: a 3-step customization wizard (event → theme → products → personalization → preview), 6 event types × 10 themes = 60 combo pages, an interactive budget calculator, a cart that persists in localStorage <em>and</em> can be shared via URL (base64-encoded), automatic volume discounts (5 / 10 / 15% tiers based on quantity), and an "express order" option that prefixes the order email with ⚡ СПЕШНА.</p>
-
-            <h4>How I built it</h4>
-            <p>Built using <strong>Claude Code</strong>. The complex business logic—including a 60-product customization matrix, dynamic volume discount tiers, and base64-encoded URL sharing—was systematically mapped into concrete rules. Extensive edge-case validation ensured correct cart operations across all devices, while structured SEO schemas (JSON-LD) were integrated to establish search engine visibility from day one.</p>
-          </div>
-
-          <ul class="proof" role="list">
-            <li>81 static pages</li>
-            <li>60 customize combinations</li>
-            <li>17-question FAQ + schema</li>
-            <li>GDPR cookie consent</li>
-            <li>Confetti on order success</li>
-            <li>SEO / GEO audit pass</li>
-          </ul>
-
-          <p class="taught"><span class="taught__label">The Hard Part</span> Mapping out a complex 60-combination customization wizard for the AI to build, and rigorously testing the output to ensure the cart and discount rules worked flawlessly across all edge cases.</p>
-        </div>
-      </article>
-
-      <!-- Project 4: Nova Control (Flagship) -->
       <article class="project project--flagship" id="project-novacontrol">
         <div class="container container--narrow">
           <div class="project__image">
-            <video class="project__video" preload="metadata" playsinline>
+            <video class="project__video" preload="none" poster="assets/Nova Control-poster.webp" playsinline aria-label="Nova Control project demonstration">
               <source src="assets/Nova Control.webm" type="video/webm">
             </video>
-            <button class="project__play" type="button" aria-label="Play video">
+            <button class="project__play" type="button" aria-label="Play Nova Control demonstration">
               <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23"/><polygon points="19,14 19,34 36,24"/></svg>
             </button>
           </div>
+
           <header class="project__header">
             <p class="project__flagship-label">Flagship Project</p>
-            <h3 class="project__title">Nova Control: Concrete Plant Dispatcher</h3>
-            <p class="project__tag"><span class="tag">Python Desktop App · 7 tabs · 2,105 tests · v2.0.1</span></p>
-            <p class="project__quote">"A workflow and recipe dispatcher for concrete batching plants, featuring a hardware-isolated safety architecture that ensures critical controls remain with the operator."</p>
+            <h3 class="project__title">Nova Control: Concrete Plant Desktop Application</h3>
+            <p class="project__tag"><span class="tag">Windows Application &middot; 7 sections &middot; 2,635 tests &middot; v2.0.4</span></p>
+            <p class="project__quote">A desktop tool that sends recipe and job details to the concrete plant&rsquo;s PLC. The operator still decides when to start, stop, or empty the mixer.</p>
           </header>
 
           <div class="project__body">
             <h4>The problem</h4>
-            <p>Concrete batching plants rely on dispatcher software to manage recipes, customer orders, and material tracking. However, the software in most local plants is old and clumsy. Because the software communicates directly with heavy machinery (scales, valves, and conveyors), there is a strict safety constraint: the dispatcher application must only write recipe values, and never trigger start, stop, or discharge commands. Those safety-critical controls must remain physically with the operator on the plant floor.</p>
+            <p>A concrete plant needs to keep recipes, customer orders, trucks, materials, and production records in sync. The difficult part is that the software also communicates with the plant&rsquo;s PLC, so it must send the right information without being able to operate the machinery itself.</p>
 
             <h4>What I built</h4>
-            <p>A Windows desktop application that integrates with a Delta PLC (with legacy serial communication support for older Omron systems). The software manages the entire dispatcher workflow across 7 specialized tabs: plant configuration, recipes, client tracking, active orders, live batch monitoring, real-time visualization, and automated PDF reporting.</p>
-            <p>The safety architecture is the core design achievement: all outgoing writes pass through a strict safety gate that blocks and logs any values outside allowed recipe ranges. Once recipe targets are pushed, the plant operator physically reviews them on the touchscreen and presses the physical START button to run the batch—keeping human oversight in control of the heavy machinery.</p>
-            <p>Additional features include a configurable Plant Builder, automated concrete passport PDF generation per truck, stock tracking with material substitution, and an active fuzzer engine to verify UI stability under randomized stress.</p>
+            <p>A Windows application with seven main sections for plant setup, recipes and materials, clients, customer requests, dispatching, live plant information, and reports. It can work with newer Delta controllers and older Omron systems. It also creates concrete passport PDFs, keeps material and activity records, makes backups, and includes a simulated controller for testing without real machinery.</p>
+            <p>Nova sends the recipe, requested amount, and number of mixer cycles to the plant touchscreen. The operator checks the information and starts production from there. Nova can read what happens and save the results, but it cannot start, stop, empty, reset, or directly control the machinery.</p>
 
             <h4>How I built it</h4>
-            <p>The system was built using AI tools across focused implementation, testing, and audit sessions to manage a codebase containing roughly 36,800 lines of production Python and 34,400 lines of test code. By consulting a concrete plant expert, 19 production decisions were mapped out covering how recipe adjustments, inventory deductions, and material substitutions behave in real-world scenarios.</p>
-            <p>To ensure industrial stability, the application was verified with 2,105 behavioural and integration tests. These cover cross-tab state communication, edge-case input validation, real-dialog UI flows, PLC driver loopbacks, and randomized fuzzer runs.</p>
+            <p>I built Nova through many small AI-assisted tasks and review sessions. A concrete-plant expert answered 40 questions about how the real workflow should behave. The project now has 2,635 automated tests covering screens, calculations, saved data, unusual inputs, controller connections, restarts, and simulated production.</p>
           </div>
 
-          <div class="safety-flow safety-flow--compact" aria-label="Safety architecture: recipe-only writes">
-            <p class="safety-flow__title">Safety Architecture</p>
-            <p class="safety-flow__oneliner">PC pushes recipe targets only → Operator presses physical START → PC reads back status and logs results. The software cannot trigger start, stop, or discharge commands.</p>
+          <div class="safety-flow safety-flow--compact" aria-label="Nova Control command boundary">
+            <p class="safety-flow__title">Control Boundary</p>
+            <p class="safety-flow__oneliner">Nova sends recipe and order details &rarr; The operator checks them and starts from the plant touchscreen &rarr; Nova reads what happened and saves the records. The desktop application cannot operate the machinery.</p>
           </div>
 
           <ul class="proof proof--flagship" role="list">
-            <li><strong>2,105</strong> passing tests</li>
-            <li><strong>7</strong> tabs · full workflow</li>
-            <li>v2.0.1 feature-complete</li>
-            <li>Recipe-only bounded writes</li>
-            <li>Configurable Plant Builder</li>
-            <li>Concrete passport PDFs</li>
+            <li><strong>2,635</strong> automated tests</li>
+            <li><strong>40</strong> expert answers</li>
+            <li><strong>7</strong> main sections</li>
+            <li>Delta + older Omron systems</li>
+            <li>Plant setup for different layouts</li>
+            <li>PDF passports + activity records</li>
           </ul>
 
-          <p class="taught"><span class="taught__label">The Hard Part</span> Structuring a large Python codebase using AI tools without losing the safety contract. This required defining clean architectural boundaries, mapping 19 domain-expert field decisions, and validating robustness through a 2,105-test suite plus multi-agent audit passes.</p>
+          <p class="taught"><span class="taught__label">The Hard Part</span> Making sure the safety rule stayed unchanged as the project grew: Nova may send production details, but the operator remains in control. Every new feature also had to follow the rules confirmed by the plant expert.</p>
 
           <div class="status status--callout">
-            <p class="status__heading"><span class="status__dot status__dot--live status__dot--opus"></span> v2.0.1 — software feature-complete.</p>
-            <p class="status__subtitle">2,105 tests passing · P6K hardware sign-off pending</p>
-            <p>All 7 tabs functional, full recipe-push handshake verified against the virtual controller, and 2,105 behavioural tests passing. The software is ready for structured hardware verification on the real Delta controller, followed by Bulgarian-language acceptance testing with plant operators before production use.</p>
+            <p class="status__heading"><span class="status__dot status__dot--pending"></span> v2.0.4: software work complete, real-machine testing still required.</p>
+            <p class="status__subtitle">2,635 automated tests &middot; simulated controller checks pass</p>
+            <p>All seven sections and the connection process work with the simulated controller. Before use at a customer&rsquo;s plant, Nova still needs to be tested with the real Delta controller and checked with Bulgarian-speaking plant operators.</p>
           </div>
+        </div>
+      </article>
+
+      <article class="project" id="project-extension">
+        <div class="container container--narrow">
+          <div class="project__image">
+            <video class="project__video" preload="none" poster="assets/fake discount bulgaria-poster.webp" playsinline aria-label="Fake Discount Bulgaria project demonstration">
+              <source src="assets/fake discount bulgaria.webm" type="video/webm">
+            </video>
+            <button class="project__play" type="button" aria-label="Play Fake Discount Bulgaria demonstration">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23"/><polygon points="19,14 19,34 36,24"/></svg>
+            </button>
+          </div>
+
+          <header class="project__header">
+            <h3 class="project__title">Fake Discount Bulgaria</h3>
+            <div class="project__meta">
+              <span class="tag">Chrome/Edge Extension</span>
+              <span class="status project__status"><span class="status__dot status__dot--live"></span>Live on <a class="status__link" href="https://chromewebstore.google.com/detail/fake-discount-bg/napohmhembobenfaaanfdabjehnjcdci" target="_blank" rel="noopener noreferrer">Chrome Web Store &nearr;</a></span>
+            </div>
+            <p class="project__quote">The extension saves prices from products you visit on 20 Bulgarian stores, then helps you judge whether a discount looks genuine.</p>
+          </header>
+
+          <div class="project__body">
+            <h4>The problem</h4>
+            <p>Online stores show discounts in different ways, and the crossed-out price does not always tell the full story. The extension saves the prices a user actually sees over time, so the current offer can be compared with a real personal history.</p>
+
+            <h4>What I built</h4>
+            <p>A Chrome and Edge extension that saves one EUR price per day when a user visits a product page on one of 20 supported stores. It shows a price-history chart and one of five simple messages: Fake discount, Real deal, Volatile price, Stable price, or Tracking. Users can search their history, set a target price, save product barcodes when available, back up their data, and use the extension in Bulgarian or English.</p>
+            <p>Each store has its own extraction rules because the websites are built differently. The extension handles pages that change without a full reload, EUR and BGN prices, unavailable products, manufacturer prices, legal 30-day reference prices, and unrelated suggested products. Price records are also sent to an online database when possible, but the extension currently makes its decisions from the history saved in the user&rsquo;s browser.</p>
+
+            <h4>How I built it</h4>
+            <p>I used Claude Code and saved copies of real product pages to test the extraction rules repeatedly. The main challenge was teaching the extension how to find the correct product price on 20 very different websites without accidentally reading an old price, an unavailable item, or a suggested product.</p>
+          </div>
+
+          <ul class="proof" role="list">
+            <li>20 supported stores</li>
+            <li>5 clear result messages</li>
+            <li>Daily history in the browser</li>
+            <li>Optional online backup of records</li>
+            <li>Barcode capture when available</li>
+            <li>Bulgarian + English</li>
+          </ul>
+
+          <p class="taught"><span class="taught__label">The Hard Part</span> Finding the correct price on 20 websites that change independently, while still giving the user a short and understandable explanation.</p>
+        </div>
+      </article>
+
+      <article class="project" id="project-malki">
+        <div class="container container--narrow">
+          <div class="project__image">
+            <video class="project__video" preload="none" poster="assets/malki podaracheta-poster.webp" playsinline aria-label="Малки Подаръчета project demonstration">
+              <source src="assets/malki podaracheta.webm" type="video/webm">
+            </video>
+            <button class="project__play" type="button" aria-label="Play Малки Подаръчета demonstration">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23"/><polygon points="19,14 19,34 36,24"/></svg>
+            </button>
+          </div>
+
+          <header class="project__header">
+            <h3 class="project__title">Малки Подаръчета</h3>
+            <div class="project__meta">
+              <span class="tag">Ordering Website &middot; 81 pages</span>
+              <span class="status project__status"><span class="status__dot status__dot--live"></span>Live at <a class="status__link" href="https://malkipodaracheta.bg/" target="_blank" rel="noopener noreferrer">malkipodaracheta.bg &nearr;</a></span>
+            </div>
+            <p class="project__quote">A simple ordering website for handmade gifts that collects the important details without adding online payment or unnecessary complexity.</p>
+          </header>
+
+          <div class="project__body">
+            <h4>The problem</h4>
+            <p>My wife makes handmade gifts for children&rsquo;s events from a small home workshop. Orders used to be discussed across Facebook and Viber messages, where quantities, dates, names, product choices, and delivery details could easily be missed.</p>
+
+            <h4>What I built</h4>
+            <p>A live website with 81 pages. Customers choose from six event types and ten themes, creating 60 possible event-and-theme combinations. They then complete three clear steps: choose products, enter personalization details, and review the order.</p>
+            <p>The cart is saved in the browser, stays in sync between open tabs, can be shared with another person through a link, and checks saved prices against the current product list. The site includes six customizable gift types, 16 variations, 19 ready-made products, 32 previous-project galleries, delivery choices, urgent-order warnings, and volume discounts at 100, 200, and 300 eligible items. The finished order is sent to the workshop by email, then confirmed and paid for directly with the customer.</p>
+
+            <h4>How I built it</h4>
+            <p>I described the workshop&rsquo;s prices, discount rules, required order details, and common mistakes to Claude Code and OpenAI Codex. The AI tools built and revised the website, while I tested the complete ordering process on desktop and mobile. The site is hosted without a custom server or payment system because the workshop does not need either.</p>
+          </div>
+
+          <ul class="proof" role="list">
+            <li>81 website pages</li>
+            <li>60 event-and-theme combinations</li>
+            <li>6 gift types + 16 variations</li>
+            <li>19 ready-made products</li>
+            <li>32 project galleries</li>
+            <li>77 pages listed for search engines</li>
+          </ul>
+
+          <p class="taught"><span class="taught__label">The Hard Part</span> Keeping shared and saved orders accurate without a database. The website must reject old prices, missing products, broken links, and incomplete personalization instead of silently sending a wrong order.</p>
+        </div>
+      </article>
+
+      <article class="project" id="project-sima-ma">
+        <div class="container container--narrow">
+          <div class="project__image">
+            <video class="project__video" preload="none" poster="assets/sima-ma-poster.webp" playsinline aria-label="SIMA-MA website project demonstration">
+              <source src="assets/sima-ma.webm" type="video/webm">
+            </video>
+            <button class="project__play" type="button" aria-label="Play SIMA-MA website demonstration">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23"/><polygon points="19,14 19,34 36,24"/></svg>
+            </button>
+          </div>
+
+          <header class="project__header">
+            <h3 class="project__title">SIMA-MA Industrial Website</h3>
+            <div class="project__meta">
+              <span class="tag">Bilingual Industrial Website</span>
+              <span class="status project__status"><span class="status__dot status__dot--pending"></span>Staged at <a class="status__link" href="https://sima-ma.netlify.app/bg/" target="_blank" rel="noopener noreferrer">Netlify &nearr;</a></span>
+            </div>
+            <p class="project__quote">A Bulgarian and English website that clearly shows what the manufacturer makes, its completed work, and how potential customers can contact the company.</p>
+          </header>
+
+          <div class="project__body">
+            <h4>The problem</h4>
+            <p>SIMA-MA makes concrete batching plants, valves, silo equipment, custom steel parts, protective linings, recycling equipment, pontoons, and automation systems. The company needed one clear website for Bulgarian and international customers, project photos, inquiries, and required EU documents.</p>
+
+            <h4>What I built</h4>
+            <p>A lightweight website with six page types in both Bulgarian and English, for 12 content pages in total. It includes an industrial background animation, a 93-image gallery split into seven categories, a full-screen image viewer that works with a keyboard or phone swipe, and an EU project section with 16 required documents in five groups.</p>
+            <p>The contact form checks required details, blocks obvious spam, asks for privacy consent, and shows clear errors. Google Maps loads only after the visitor agrees. The hosting setup includes security and caching rules, while the search setup tells Google which pages are Bulgarian or English and how the company and its services should appear.</p>
+
+            <h4>How I built it</h4>
+            <p>I used Claude Code and OpenAI Codex to build, review, and test the site. I chose simple website files instead of a large framework so future text, images, and documents are easier to update.</p>
+          </div>
+
+          <ul class="proof" role="list">
+            <li>12 Bulgarian/English pages</li>
+            <li>93 optimized project images</li>
+            <li>7 gallery categories</li>
+            <li>16 EU documents</li>
+            <li>Keyboard + swipe image viewer</li>
+            <li>Security and caching settings</li>
+          </ul>
+
+          <p class="taught"><span class="taught__label">The Hard Part</span> Turning incomplete company information and many technical photos into a clear website, then keeping the Bulgarian and English versions consistent.</p>
         </div>
       </article>
     </section>
 
-    <!-- 5. HOW I WORK -->
     <section class="section section--how" id="how" aria-labelledby="how-label">
       <div class="container container--narrow">
         <p class="section-label" id="how-label">How I work</p>
-        <h2 class="section__title">From problem to product.</h2>
-        <p class="section__lead">Every project starts with a problem I break down into clear pieces — what the system needs to do, where the boundaries are, and what "done" actually looks like. Then I use AI-assisted development to build it piece by piece, while I test and verify every step.</p>
+        <h2 class="section__title">From problem to working software.</h2>
+        <p class="section__lead">Every project starts with a real problem. I first work out what people need, what can go wrong, and what a correct result should look like.</p>
 
-        <ul style="list-style: none; padding: 0; margin: 1.75rem 0 0 0; display: flex; flex-direction: column; gap: 1.25rem;">
-          <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
-            <span style="color: var(--accent); font-weight: bold; font-family: var(--mono); font-size: 0.875rem; padding-top: 0.1rem;">[1]</span>
-            <div>
-              <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.125rem; color: var(--text);">Break the problem down</strong>
-              <span style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; display: block;">Before any code is generated, I map out the full system — what each part does, how parts connect, and what can go wrong. The AI builds faster when it gets clear, isolated tasks instead of vague requests.</span>
-            </div>
+        <ol class="work-list">
+          <li>
+            <span class="work-list__index">01</span>
+            <div><strong>Understand the real process</strong><span>I collect examples, questions, unusual cases, and rules before asking AI to build anything.</span></div>
           </li>
-          <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
-            <span style="color: var(--accent); font-weight: bold; font-family: var(--mono); font-size: 0.875rem; padding-top: 0.1rem;">[2]</span>
-            <div>
-              <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.125rem; color: var(--text);">Test until it actually works</strong>
-              <span style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; display: block;">Generated code gets the same scrutiny as hand-written code. Nova Control has 2,105 tests not because AI demanded it, but because industrial software requires proof that edge cases are handled before hardware sign-off.</span>
-            </div>
+          <li>
+            <span class="work-list__index">02</span>
+            <div><strong>Use AI to build in small steps</strong><span>I give the AI one clear task at a time, check the result in the actual application, and ask for corrections when something is wrong.</span></div>
           </li>
-          <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
-            <span style="color: var(--accent); font-weight: bold; font-family: var(--mono); font-size: 0.875rem; padding-top: 0.1rem;">[3]</span>
-            <div>
-              <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.125rem; color: var(--text);">Own it from start to finish</strong>
-              <span style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; display: block;">Architecture, deployment, maintenance — all of it. The Fake Discount extension is live on the Chrome Web Store and gets updated regularly. These aren't demos — they're products.</span>
-            </div>
+          <li>
+            <span class="work-list__index">03</span>
+            <div><strong>Test the important parts</strong><span>I test normal use, mistakes, unusual values, saved data, mobile layouts, and connections between different parts of the software.</span></div>
           </li>
-        </ul>
+          <li>
+            <span class="work-list__index">04</span>
+            <div><strong>Be honest about the current status</strong><span>Some projects are live, one is staged, and Nova Control still needs real-machine testing. I keep those limits visible instead of presenting unfinished work as complete.</span></div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- 6. CONTACT -->
     <section class="section section--contact" id="contact" aria-labelledby="contact-label">
       <div class="container container--narrow">
         <p class="section-label" id="contact-label">Contact</p>
-        <h2 class="section__title">Let's talk.</h2>
-        <p class="section__lead">Phone, email, or LinkedIn - whichever is easiest. Open to Senior Data Operations Analyst roles and adjacent opportunities where data operations, process improvement, and AI-assisted tooling create business value.</p>
+        <h2 class="section__title">Let&rsquo;s talk.</h2>
+        <p class="section__lead">Phone, email, or LinkedIn, whichever is easiest. I am open to Senior Data Operations Analyst roles and related positions where careful data work, better processes, and practical AI tools can help a team.</p>
         <ul class="contact-list" role="list">
           <li>
             <a class="contact-card" href="tel:+359878235718" aria-label="Call +359 87 823 5718">
               <span class="contact-card__label">Phone</span>
               <span class="contact-card__value">+359 87 823 5718</span>
-              <span class="contact-card__hint">Tap to call ↗</span>
+              <span class="contact-card__hint">Tap to call &nearr;</span>
             </a>
           </li>
           <li>
             <button class="contact-card" type="button" data-copy="victortserovski@gmail.com" aria-label="Copy email address to clipboard">
               <span class="contact-card__label">Email</span>
               <span class="contact-card__value">victortserovski@gmail.com</span>
-              <span class="contact-card__hint" data-hint-default="Click to copy" data-hint-copied="Copied ✓">Click to copy</span>
+              <span class="contact-card__hint" data-hint-default="Click to copy" data-hint-copied="Copied">Click to copy</span>
             </button>
           </li>
           <li>
             <a class="contact-card" href="https://www.linkedin.com/in/victortserovski/" target="_blank" rel="noopener noreferrer">
               <span class="contact-card__label">LinkedIn</span>
               <span class="contact-card__value">linkedin.com/in/victortserovski</span>
-              <span class="contact-card__hint">Open profile ↗</span>
+              <span class="contact-card__hint">Open profile &nearr;</span>
             </a>
           </li>
           <li>
-            <button class="contact-card" type="button" data-action="print" aria-label="Save this page as a PDF resume">
-              <span class="contact-card__label">Resume</span>
-              <span class="contact-card__value">Save as PDF</span>
-              <span class="contact-card__hint">Click to save ↓</span>
+            <button class="contact-card" type="button" data-action="print" aria-label="Open the print dialog for this portfolio">
+              <span class="contact-card__label">Portfolio</span>
+              <span class="contact-card__value">Print this page</span>
+              <span class="contact-card__hint">Open print dialog</span>
             </button>
           </li>
         </ul>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
     <div class="container container--narrow">
-      <p class="footer__credit">Built using <strong>Claude Code</strong>. Hosted on <strong>GitHub Pages</strong>.</p>
-      <p class="footer__copy">© <span data-year>2026</span> Victor Tserovski</p>
+      <p class="footer__credit">Built with AI-assisted development using <strong>Claude Code</strong> and <strong>OpenAI Codex</strong>. Hosted on <strong>GitHub Pages</strong>.</p>
+      <p class="footer__copy">&copy; <span data-year>2026</span> Victor Tserovski</p>
     </div>
   </footer>
 
