@@ -8,7 +8,6 @@ README SIMA-MA website.md
 README malki podaracheta.md
 README fake discount.md
 README - fake discount BG.md
-PRIVACY.md
 CLAUDE.md
 
 # Original headshot (copied to assets/headshot.jpg; original kept locally)
@@ -20,8 +19,6 @@ Thumbs.db
 *.swp
 .vscode/
 .idea/
-.github_token
-dashes.txt
 nova control/
 fake discount BG/
 malki podaracheta/
