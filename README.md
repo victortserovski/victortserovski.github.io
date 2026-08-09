@@ -2,7 +2,7 @@
 
 Personal portfolio for **Victor Tserovski**, Senior Data Operations Analyst.
 
-> I build working software with AI-assisted development.
+> I use AI coding tools to build, test, and improve working software.
 
 Live site: [victortserovski.github.io](https://victortserovski.github.io/)
 
@@ -15,11 +15,11 @@ Live site: [victortserovski.github.io](https://victortserovski.github.io/)
 
 ## Positioning
 
-Victor's background is in data operations, not traditional software development. These projects were built with AI coding tools. His role was to explain the requirements, make decisions, test the results, and keep each project's current status clear.
+Victor is a Senior Data Operations Analyst moving toward AI-assisted development, rapid prototyping, and multi-agent code review. He uses AI coding tools to turn requirements into working projects, then tests the behavior, reviews the results, and keeps each project's current status clear.
 
 ## Site
 
-The portfolio itself uses simple HTML, CSS, and JavaScript files. It works on desktop and mobile, includes accessible video controls and reduced-motion support, and provides the information needed when the site is shared on social media.
+The portfolio itself uses simple HTML and CSS. It works on desktop and mobile, uses native video and expandable-detail controls, supports reduced motion, and provides the information needed when the site is shared on social media.
 
 GitHub Pages serves the `main` branch. A push normally deploys within a few minutes.
 
