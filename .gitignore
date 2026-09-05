@@ -1,5 +1,7 @@
-# Local dev / Claude Code config (not for the public repo)
+# Local agent configuration (not for the public repo)
 .claude/
+.codex/
+.agents/
 
 # Source files used to brief Claude — kept locally, not deployed
 MASTER_PROMPT NC.md
@@ -10,7 +12,7 @@ README fake discount.md
 README - fake discount BG.md
 CLAUDE.md
 
-# Original headshot (copied to assets/headshot.jpg; original kept locally)
+# Original portrait source (published images live in assets/)
 vic ts.jpg
 
 # OS / editor cruft
