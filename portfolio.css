@@ -112,12 +112,15 @@ section[id], article[id] { scroll-margin-top: 5rem; }
   font-size: .78rem; font-weight: 750; letter-spacing: .02em;
 }
 .site-nav { display: flex; align-items: center; gap: .25rem; }
+/* Immediate feedback avoids trailing highlights when moving between links. */
 .site-nav a {
   display: inline-flex; align-items: center; gap: .3rem; min-height: 2.5rem; padding: 0 .8rem;
   border-radius: 999px; text-decoration: none; font-size: .9375rem; color: var(--muted); white-space: nowrap;
-  transition: color .15s, background-color .15s;
 }
-.site-nav a:hover { color: var(--ink); background: var(--surface-2); }
+.site-nav a:focus-visible { color: var(--ink); background: var(--surface-2); }
+@media (hover: hover) and (pointer: fine) {
+  .site-nav a:hover { color: var(--ink); background: var(--surface-2); }
+}
 .site-nav .nav-cv { color: var(--ink); border: 1px solid var(--line-strong); margin-left: .35rem; }
 
 /* Buttons and small UI */
@@ -299,7 +302,7 @@ section[id], article[id] { scroll-margin-top: 5rem; }
 .more-body h4 { font-size: .9688rem; font-weight: 650; margin-bottom: .4rem; }
 .more-body p { color: var(--muted); font-size: .9688rem; line-height: 1.65; }
 
-/* How I work */
+/* Approach */
 .approach { padding-block: clamp(3.5rem, 8vw, 6rem); background: var(--surface); border-block: 1px solid var(--line); }
 .steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; padding: 0; list-style: none; counter-reset: none; }
 .steps li {
@@ -410,7 +413,7 @@ section[id], article[id] { scroll-margin-top: 5rem; }
   .trophy { width: 3.5rem; height: 3.5rem; }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .site-nav .nav-cv { display: none; }
 }
 
