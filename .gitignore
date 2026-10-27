@@ -26,3 +26,12 @@ fake discount BG/
 malki podaracheta/
 SIMA-MA website/
 SIMA-MAwebsite/
+
+# Project briefs and raw recordings kept next to the published media (not deployed)
+assets/*README.md
+assets/malki-podaracheta-walkthrough.mp4
+assets/sima-ma-poster.png
+assets/Fake Discount.webm
+
+# Alternative design kept locally
+Opus 5.5 Extra version/
