@@ -15,7 +15,7 @@ I’m Victor, a Senior Data Operations Analyst who builds desktop, browser and w
 
 ## Recognition
 
-- **2nd place, NielsenIQ vibe-coding hackathon:** our team built a prototype AI pricing agent for sellers, reverse-engineering Excel workbooks with about 40 sheets and 500,000+ formulas. Built with a low-cost coding agent for about $7.
+- **2nd place, NielsenIQ vibe-coding hackathon:** working solo, I built a prototype AI pricing agent for sellers, reverse-engineering Excel workbooks with about 40 sheets and 500,000+ formulas. Built with a low-cost coding agent for about $7.
 
 ## Site maintenance
 
