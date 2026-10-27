@@ -2,20 +2,20 @@
 
 **Real workflows. Thoughtfully built software.**
 
-I’m Victor, a Senior Data Operations Analyst who builds desktop, browser and web software with AI coding agents (Claude Code, Codex, Cursor), then tests it as if it were going to production.
+I’m Victor, a Senior Data Operations Analyst at NielsenIQ. I build desktop apps, browser extensions and websites with AI coding agents, taking responsibility for the requirements, product decisions and testing.
 
 [View the portfolio](https://victortserovski.github.io/)
 
 ## Selected work
 
-- **Nova Control:** A Windows program that runs a ready-mix concrete plant’s day, from orders and truckloads to batch records, invoices and 19 reports. It talks in real time to the plant’s existing Omron PLCs. 524 automated checks against a built-in PLC simulator. Feature-complete; a bench test with a real PLC comes next, so it is not yet in production.
-- **Fake Discount Bulgaria:** A Chrome and Edge extension that checks “discounts” in 20 Bulgarian online stores against the prices you have actually seen. All data stays in the browser. [Chrome Web Store](https://chromewebstore.google.com/detail/fake-discount-bulgaria-ca/napohmhembobenfaaanfdabjehnjcdci) · [Source](https://github.com/victortserovski/Fake-Discount-BG)
-- **Малки Подаръчета:** A storefront for personalised handmade stationery, with live product previews, 60 event-and-theme designs and a non-binding request flow. [Live website](https://malkipodaracheta.bg/)
-- **SIMA-MA:** A Bulgarian and English website for an industrial manufacturer: 32 pages, 93 optimised photos, and automated browser checks on every release. [Live website](https://sima-ma.com/en/)
+- **Nova Control:** Windows software for concrete-plant dispatch, production records and invoicing, with Omron PLC integration and 19 built-in reports. Validated through 524 automated checks against a simulator; real-PLC bench testing is pending.
+- **Fake Discount Bulgaria:** A Chrome and Edge extension that records prices across 20 Bulgarian online stores and compares claimed discounts with locally observed history. Price targets are checked on visits. Since version 3.19, recorded price history stays in local browser storage. [Chrome Web Store](https://chromewebstore.google.com/detail/fake-discount-bulgaria-ca/napohmhembobenfaaanfdabjehnjcdci) · [Source](https://github.com/victortserovski/Fake-Discount-BG)
+- **Малки Подаръчета:** A personalised stationery storefront with live previews, ten themes across six occasions and a non-binding request flow. The workshop confirms the final design before production. [Live website](https://malkipodaracheta.bg/)
+- **SIMA-MA:** A Bulgarian and English manufacturing website with 32 pages, 93 optimised project photos and a browser suite covering seven screen widths. The migration preserves old WordPress links and carries the selected service into the quote form. [Live website](https://sima-ma.com/en/)
 
 ## Recognition
 
-- **2nd place, NielsenIQ vibe-coding hackathon:** working solo, I built a prototype AI pricing agent for sellers, reverse-engineering Excel workbooks with about 40 sheets and 500,000+ formulas. Built with a low-cost coding agent for about $7.
+- **2nd place, NielsenIQ vibe-coding hackathon:** a solo prototype of an AI pricing agent for sellers. The challenge called for exploring what-if pricing scenarios and preparing quotes outside the CRM. My work involved reverse-engineering Excel workbooks containing about 40 sheets and more than 500,000 formulas, using approximately $7 in AI tokens.
 
 ## Site maintenance
 
