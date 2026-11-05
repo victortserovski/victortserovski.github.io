@@ -389,10 +389,27 @@ section[id], article[id] { scroll-margin-top: 5rem; }
   .site-nav a { padding: 0 .6rem; font-size: .9063rem; }
   .site-nav .nav-cv { margin-left: .15rem; }
 
-  .hero { grid-template-columns: minmax(0, 1fr); grid-template-areas: "photo" "text"; gap: 1.5rem; padding-top: 1.75rem; }
-  .hero-photo { justify-self: start; width: 96px; }
-  .hero-photo img { aspect-ratio: 1; border-radius: 22px; object-position: 50% 28%; }
-  .hero h1 { margin-top: 1.1rem; }
+  /* Photo and availability share the first row; the rest of the hero text runs full width below. */
+  .hero {
+    grid-template-columns: auto minmax(0, 1fr); grid-template-areas: none;
+    gap: 0 .9rem; padding-top: 1.75rem;
+  }
+  .hero-text { display: contents; }
+  .hero-text > * { grid-column: 1 / -1; }
+  .hero-photo { grid-column: 1; grid-row: 1; justify-self: start; width: 64px; }
+  .hero-photo img {
+    aspect-ratio: 1; border-radius: 50%; object-position: 50% 26%;
+    box-shadow: 0 0 0 1px var(--line-strong);
+  }
+  .hero-text > .availability {
+    grid-column: 2; grid-row: 1; align-items: flex-start; gap: .55rem;
+    padding: 0; border: 0; border-radius: 0; background: none;
+    color: var(--ink); font-size: .9375rem; line-height: 1.4;
+  }
+  .availability .pulse { margin-top: .45em; }
+  .availability-sep { display: none; }
+  .availability-place { display: block; color: var(--muted); }
+  .hero h1 { margin-top: 1.5rem; }
   .actions .btn { flex: 1 1 auto; }
   .actions .btn-primary { flex-basis: 100%; }
   .hero-facts { grid-template-columns: minmax(0, 1fr); gap: .9rem; }
